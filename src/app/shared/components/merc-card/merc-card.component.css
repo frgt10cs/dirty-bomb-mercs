@@ -1,0 +1,16 @@
+.card{
+    border: 1px solid grey;
+    padding: 5px 8px;
+    background-color: #060709;    
+}
+
+.card-merc-name{
+    color:#FDBC01;
+    margin-top: 10px;
+}
+
+.card-img{
+    width: 270px;
+    height: 429px;
+    display: block;
+}
