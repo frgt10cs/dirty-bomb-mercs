@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Aimee",
+    "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/b/b6/Aimee_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025944",
+    "profile": {
+      "realName": "N/A",
+      "nationality": "French"
+    },
+    "attributes": {
+      "class": "Recon",
+      "health": 90,
+      "sprint": 440,
+      "arm": 5,
+      "defuse": 8
+    },
+    "cost": {
+      "credits": 40000,
+      "money": 7.99
+    },
+    "info": {
+      "quote": "Strictly speaking I'm the Aimer, not the Aimee",
+      "overview": "A lightning quick Sniper savant with a taste for chic and a chip on her shoulder, Aimee delivers disruption en route for her team. Her Snitch device contains a neural disruptor that softens up Mercs as well as spotting them, bidding her opponents adieu.",
+      "abilities": [
+        {
+          "name": "",
+          "description": "The Scanning Node (and) Invasive Tactical Covert Hypodynamic Device or SNITCH Device for short is a throw-able camera that sticks to the first wall or surfaces it comes into contact with. The device automatically spots enemy players in-front of it and if in range can zap them with a neural disruptor which debilitates players. If players are marked they take 25% more bullet damage for 7 seconds. The neural disruptor halts any health regeneration, however, medics can remove the debuff by giving players health. If not destroyed, the SNITCH last 25 seconds and has a 25 second cooldown.\n\nThe SNITCH deals 1 damage upon debilitating a player, and it is possible to get a kill with this damage."
+        }
+      ],
+      "weapons": {
+        "primaries": [
+          {
+            "imgUrl": "",
+            "name": "PDP-70"
+          },
+          {
+            "imgUrl": "",
+            "name": "Fel-ix"
+          },
+          {
+            "imgUrl": "",
+            "name": "Grandeur SR"
+          }
+        ],
+        "secondaries": [
+          {
+            "imgUrl": "",
+            "name": "DE .50"
+          },
+          {
+            "imgUrl": "",
+            "name": "Caulden"
+          },
+          {
+            "imgUrl": "",
+            "name": "Selbstadt .40"
+          }
+        ],
+        "melee": [
+          {
+            "imgUrl": "",
+            "name": "Stilnotto Stiletto"
+          },
+          {
+            "imgUrl": "",
+            "name": "Beckhill Combat Knife"
+          },
+          {
+            "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/6/62/Kukri.png/revision/latest/scale-to-width-down/350?cb=20151024154122",
+            "name": "Kukri"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Arty",
+    "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/4/4b/Arty_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025945",
+    "profile": {
+      "realName": "CJ Wond",
+      "nationality": "Chinese"
+    },
+    "attributes": {
+      "class": "Fire support",
+      "health": 120,
+      "sprint": 400,
+      "arm": 5,
+      "defuse": 8
+    },
+    "cost": {
+      "credits": 35000,
+      "money": 6.99
+    },
+    "info": {
+      "quote": "Call me Arty. And stay out of my way, okay? Dangerous for you",
+      "overview": "His artillery designator lets him mark out targets for devastating artillery salvos while staying at a distance from the front line. He also can throw ammo packs to keep his teammates' weapons loaded.",
+      "abilities": [
+        {
+          "name": "Artillery Strike",
+          "description": "By switching to his targeter and marking at a location, Arty calls down a quick salvo of high damage artillery rounds, which will fragmentate, and drop a rain of explosives over the selected area. It has a 20 second recharge, and he can hold 2 charges at a time."
+        },
+        {
+          "name": "Ammo Pack",
+          "description": "These can be dropped on the floor or throw directly at teammates. Picking up an ammo pack instantly refills your reserve ammo to full. Throwing it directly at a teammate speeds up their ability's cooldown slightly."
+        }
+      ],
+      "weapons": {
+        "primaries": [
+          {
+            "imgUrl": "",
+            "name": "BR-16"
+          },
+          {
+            "imgUrl": "",
+            "name": "Dreiss AR"
+          },
+          {
+            "imgUrl": "",
+            "name": "Stark AR"
+          }
+        ],
+        "secondaries": [
+          {
+            "imgUrl": "",
+            "name": "Caulden"
+          },
+          {
+            "imgUrl": "",
+            "name": "M9"
+          },
+          {
+            "imgUrl": "",
+            "name": "Selbstadt .40"
+          }
+        ],
+        "melee": [
+          {
+            "imgUrl": "",
+            "name": "Stilnotto Stiletto"
+          },
+          {
+            "imgUrl": "",
+            "name": "Cricket Bat"
+          },
+          {
+            "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/6/62/Kukri.png/revision/latest/scale-to-width-down/350?cb=20151024154122",
+            "name": "Beckhill Combat Knife ("
+          }
+        ]
+      }
+    }
+  }
+]

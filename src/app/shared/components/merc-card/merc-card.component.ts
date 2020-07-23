@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {Merc} from '../../models/merc';
 
 @Component({
   selector: 'app-merc-card',
@@ -7,10 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MercCardComponent implements OnInit {
 
-  @Input() imgUrl:string;
-  @Input() name:string;
+  @Input() imgUrl: string;
+  @Input() name: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

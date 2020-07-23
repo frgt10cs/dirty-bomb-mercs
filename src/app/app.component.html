@@ -5,15 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>  
+<body>
   <app-header>
 
-  </app-header>  
-  <app-merc-card *ngFor="let card of repository.getAll()" [name]="card.name" [imgUrl]="card.imgUrl" class="container d-flex">
-    
-  </app-merc-card>
+  </app-header>
+  <div class="text-light text-center my-5">
+    <h1 class="">Mercenaries</h1>
+    <p class="">The mercs are the playable classes/characters in Dirty Bomb. Each of them has their own health, run speed and abilities.</p>
+  </div>
+
+  <div class="container d-flex">
+    <app-merc-card *ngFor="let merc of repository.getAll()" [imgUrl] = "merc.imgUrl" [name]="merc.name">
+
+    </app-merc-card>
+  </div>
   <app-footer>
-    
+
   </app-footer>
 </body>
 </html>

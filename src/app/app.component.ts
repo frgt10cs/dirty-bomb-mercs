@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
-import { MercCard } from './shared/models/merc-card';
-import { RepositoryService } from './core/services/repository.service';
-import { Merc } from './shared/models/merc';
-import { InMemoryRepositoryService } from './core/services/in-memory-repository.service';
+import {Component} from '@angular/core';
+import {MercCard} from './shared/models/merc-card';
+import {RepositoryService} from './core/services/repository.service';
+import {Merc} from './shared/models/merc';
+import {JsonRepositoryService} from './core/services/json-repository.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[{provide: RepositoryService, useClass: InMemoryRepositoryService }]
+  providers: [{provide: RepositoryService, useClass: JsonRepositoryService}]
 })
 export class AppComponent {
-  public repository:RepositoryService<Merc>;  
+  public repository: RepositoryService<Merc>;
 
-  constructor(private repos:RepositoryService<Merc>){
-    this.repository = repos;    
+  constructor(private repos: RepositoryService<Merc>) {
+    this.repository = repos;
     // this.aimee.name = "Aimee";
     // this.aimee.imgUrl = "https://vignette.wikia.nocookie.net/dirtybomb/images/b/b6/Aimee_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025944";
-    // this.mercs.push(this.aimee);    
+    // this.mercs.push(this.aimee);
   }
 }
