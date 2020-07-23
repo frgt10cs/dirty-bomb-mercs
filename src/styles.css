@@ -1,5 +1,48 @@
-body{
+@font-face {
+  font-family: DirtyBomb;
+  src: url("/assets/fonts/DirtyBomb_DD-Black-Cyr.otf") format("opentype");
+}
+
+* {
+  font-family: DirtyBomb;
+}
+
+body {
   background-image: url("assets/images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
+.dark-text {
+  color: #FDBC01;
+  background-color: black;
+}
+
+.empty-btn{
+  border: 0;
+  background: none;
+}
+
+.dark-btn{
+  color: white;
+}
+
+.dark-btn:hover{
+  color: #FDBC01;
+}
+
+.dark-btn:disabled,
+.dark-btn[disabled]{
+  color: #8B6801;
 }

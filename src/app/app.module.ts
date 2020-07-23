@@ -6,16 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { MercCardComponent } from './shared/components/merc-card/merc-card.component';
-import { MercEditorComponent } from './core/merc-editor/merc-editor.component';
+import { MercViewerComponent } from './core/merc-viewer/merc-viewer.component';
 import { MercDataGroupComponent } from './shared/components/merc-data-group/merc-data-group.component';
 
 @NgModule({
   declarations: [
-    AppComponent,  
+    AppComponent,
     HeaderComponent,
     FooterComponent,
     MercCardComponent,
-    MercEditorComponent,
+    MercViewerComponent,
     MercDataGroupComponent
   ],
   imports: [
