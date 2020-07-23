@@ -15,10 +15,13 @@
   </div>
 
   <div class="container d-flex">
-    <app-merc-card *ngFor="let merc of repository.getAll()" [imgUrl] = "merc.imgUrl" [name]="merc.name">
+    <app-merc-card *ngFor="let merc of repository.getAll()" [id] = "merc.id" [imgUrl] = "merc.imgUrl" [name]="merc.name">
 
     </app-merc-card>
   </div>
+  <app-merc-editor [selectedMerc]="repository.getAll()[0]">
+
+  </app-merc-editor>
   <app-footer>
 
   </app-footer>

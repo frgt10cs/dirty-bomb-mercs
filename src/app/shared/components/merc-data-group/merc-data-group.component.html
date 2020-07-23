@@ -1,0 +1,13 @@
+<div class="merc-data-container">
+  <div class="merc-data-container-title">
+    {{ dataGroup?.name }}
+  </div>
+  <div *ngFor="let dataItem of dataGroup?.data" class="merc-data-item">
+    <div class="merc-data-item-title">
+      {{ dataItem?.name }}
+    </div>
+    <div class="merc-data-item-value">
+      {{ dataItem?.value }}
+    </div>
+  </div>
+</div>

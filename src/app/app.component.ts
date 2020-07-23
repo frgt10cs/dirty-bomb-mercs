@@ -8,15 +8,14 @@ import {JsonRepositoryService} from './core/services/json-repository.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [{provide: RepositoryService, useClass: JsonRepositoryService}]
+  providers: [{provide: 'type', useValue: Merc}, {provide: RepositoryService, useClass: JsonRepositoryService}]
 })
 export class AppComponent {
   public repository: RepositoryService<Merc>;
 
+  selectedMerc: Merc;
+
   constructor(private repos: RepositoryService<Merc>) {
     this.repository = repos;
-    // this.aimee.name = "Aimee";
-    // this.aimee.imgUrl = "https://vignette.wikia.nocookie.net/dirtybomb/images/b/b6/Aimee_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025944";
-    // this.mercs.push(this.aimee);
   }
 }

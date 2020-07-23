@@ -1,0 +1,98 @@
+<div>
+  <div class="merc-img-container">
+    <img src="{{ selectedMerc?.imgUrl }}" alt="" class="merc-img">
+  </div>
+  <div class="merc-name">
+    {{ selectedMerc?.name }}
+  </div>
+  <app-merc-data-group *ngFor="let group of selectedMerc?.data" [dataGroup]="group">
+
+  </app-merc-data-group>
+  <!--<div class="merc-data-container">
+    <div class="merc-data-container-title">
+      Profile
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Real Name
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.profile.realName }}
+      </div>
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Nationality
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.profile.nationality }}
+      </div>
+    </div>
+  </div>
+  <div class="merc-data-container">
+    <div class="merc-data-container-title">
+      Attributes
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Class
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.attributes.class }}
+      </div>
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Health
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.attributes.health }}
+      </div>
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Sprint
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.attributes.sprint }}
+      </div>
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Arm
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.attributes.arm }}
+      </div>
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Defuse
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.attributes.defuse }}
+      </div>
+    </div>
+  </div>
+  <div class="merc-data-container">
+    <div class="merc-data-container-title">
+      Cost
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Credits
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.cost.credits }}
+      </div>
+    </div>
+    <div class="merc-data-item">
+      <div class="merc-data-item-title">
+        Money
+      </div>
+      <div class="merc-data-item-value">
+        {{ selectedMerc.cost.money }}
+      </div>
+    </div>
+  </div>-->
+</div>

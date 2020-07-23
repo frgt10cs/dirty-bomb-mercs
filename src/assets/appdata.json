@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "name": "Aimee",
     "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/b/b6/Aimee_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025944",
     "profile": {
@@ -73,6 +74,7 @@
     }
   },
   {
+    "id": 1,
     "name": "Arty",
     "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/4/4b/Arty_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025945",
     "profile": {
