@@ -13,6 +13,7 @@ export class MercDataItemComponent implements OnInit, DoCheck {
   @Input() isEditable: boolean;
 
   constructor() {
+    this.isEditable = true;
   }
 
   ngOnInit(): void {
