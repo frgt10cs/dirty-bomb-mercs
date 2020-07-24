@@ -1,16 +1,16 @@
-.card{
-    border: 1px solid grey;
-    padding: 5px 8px;
-    background-color: #060709;    
+.card {
+  border: 1px solid grey;
+  padding: 5px 8px;
+  background-color: #060709;
+  cursor: pointer;
 }
 
-.card-merc-name{
-    color:#FDBC01;
-    margin-top: 10px;
-}
-
-.card-img{
-    width: 270px;
-    height: 429px;
-    display: block;
+.card-merc-name {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  left: 0;
 }

@@ -1,15 +1,29 @@
-<div class="app-merc-viewer-container">
-  <div class="merc-img-container">
-    <img src="{{ selectedMerc?.imgUrl }}" alt="" class="merc-img">
+<div class="merc-viewer-container p-2">
+  <div class="merc-name-container">
+    <h3 class="pt-2 pl-2">{{ selectedMerc.name }}</h3>
   </div>
-  <div class="dark-text p-2 d-flex align-items-center justify-content-between">
-    <div class="merc-name">{{ selectedMerc?.name }}</div>
-    <button class="empty-btn dark-btn h6-small" (click)="this.editable = true" [disabled]="editable">Edit</button>
-  </div>
-  <app-merc-data-group *ngFor="let group of selectedMerc?.data" [dataGroup]="group" [editable]="editable">
+  <hr>
+  <div class="merc-viewer-data">
+    <div class="merc-info-container p-3">
+      <app-merc-info [info]="selectedMerc.information">
 
-  </app-merc-data-group>
-  <div *ngIf="editable">
-    <button (click)="saveMerc()">Save</button>
+      </app-merc-info>
+    </div>
+    <div class="merc-data-container">
+      <div class="dark-text p-2 d-flex align-items-center justify-content-between">
+        <input type="text" class="dark-text merc-name" [value]="selectedMerc?.name" [disabled]="!editable"
+               [class.border-transparent]="!editable">
+        <button class="empty-btn dark-btn h6-small" (click)="this.editable = true" [disabled]="editable">Edit</button>
+      </div>
+      <div class="merc-img-container">
+        <img src="{{ selectedMerc?.imgUrl }}" alt="" class="merc-img">
+      </div>
+      <app-merc-data-group *ngFor="let group of selectedMerc?.data" [dataGroup]="group" [editable]="editable">
+
+      </app-merc-data-group>
+      <div *ngIf="editable">
+        <button (click)="saveMerc()">Save</button>
+      </div>
+    </div>
   </div>
 </div>

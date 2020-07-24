@@ -3,6 +3,7 @@
     "id": 0,
     "name": "Aimee",
     "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/b/b6/Aimee_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025944",
+    "imgPreviewUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/3/32/Aimee_Portrait.png/revision/latest/scale-to-width-down/80?cb=20151111055734",
     "profile": {
       "realName": "N/A",
       "nationality": "French"
@@ -18,7 +19,7 @@
       "credits": 40000,
       "money": 7.99
     },
-    "info": {
+    "information": {
       "quote": "Strictly speaking I'm the Aimer, not the Aimee",
       "overview": "A lightning quick Sniper savant with a taste for chic and a chip on her shoulder, Aimee delivers disruption en route for her team. Her Snitch device contains a neural disruptor that softens up Mercs as well as spotting them, bidding her opponents adieu.",
       "abilities": [
@@ -70,13 +71,16 @@
             "name": "Kukri"
           }
         ]
-      }
+      },
+      "videoUrl": "https://www.youtube.com/embed/lqIPS9f7vGw"
     }
   },
   {
     "id": 1,
     "name": "Arty",
     "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/4/4b/Arty_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025945",
+    "imgPreviewUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/8/84/Arty_Portrait.png/revision/latest/scale-to-width-down/80?cb=20151111055735",
+    "videoUrl": "",
     "profile": {
       "realName": "CJ Wond",
       "nationality": "Chinese"
@@ -92,7 +96,7 @@
       "credits": 35000,
       "money": 6.99
     },
-    "info": {
+    "information": {
       "quote": "Call me Arty. And stay out of my way, okay? Dangerous for you",
       "overview": "His artillery designator lets him mark out targets for devastating artillery salvos while staying at a distance from the front line. He also can throw ammo packs to keep his teammates' weapons loaded.",
       "abilities": [
@@ -148,7 +152,8 @@
             "name": "Beckhill Combat Knife ("
           }
         ]
-      }
+      },
+      "videoUrl": ""
     }
   }
 ]

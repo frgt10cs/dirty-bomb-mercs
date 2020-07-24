@@ -9,7 +9,7 @@ import {Merc} from '../../models/merc';
 export class MercCardComponent implements OnInit {
 
   @Input() id: number;
-  @Input() imgUrl: string;
+  @Input() imgPreviewUrl: string;
   @Input() name: string;
 
   constructor() {

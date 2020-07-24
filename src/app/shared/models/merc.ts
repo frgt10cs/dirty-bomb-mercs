@@ -44,16 +44,18 @@ export class Info {
   overview: string;
   abilities: string;
   weapons: Weapons;
+  videoUrl: string;
 }
 
 export class Merc {
   id: number;
   imgUrl: string;
+  imgPreviewUrl: string;
   name: string;
   profile: Profile;
   attributes: Attributes;
   cost: Cost;
-  info: Info;
+  information: Info;
   /// Represents array of data group for demonstration
   private _data: MercDataGroup[];
 

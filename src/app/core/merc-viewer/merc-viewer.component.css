@@ -1,16 +1,18 @@
-.app-merc-viewer-container {
+.merc-viewer-container {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 8px 5px;
   border: 1px solid grey;
+}
+
+.merc-viewer-data{
+  display: flex;
+  flex-direction: row;
 }
 
 :host {
   display: flex;
+  margin-right: auto;
 }
 
 .merc-name{
   font-size: 20px;
 }
-

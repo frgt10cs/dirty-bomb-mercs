@@ -7,7 +7,7 @@
       {{ dataItem?.name }}
     </div>
     <div class="merc-data-item-value-container">
-      <input type="text" class="merc-data-item-value px-2 py-1" value="{{ dataItem?.value }}" [disabled]="!editable"
+      <input type="text" class="merc-data-item-value px-2 py-1" [value]="dataItem?.value" [disabled]="!editable"
              [class.border-transparent]="!editable">
     </div>
   </div>

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Output} from '@angular/core';
 import {MercCard} from './shared/models/merc-card';
 import {RepositoryService} from './core/services/repository.service';
 import {Merc} from './shared/models/merc';
@@ -17,5 +17,12 @@ export class AppComponent {
 
   constructor(private repos: RepositoryService<Merc>) {
     this.repository = repos;
+    this.selectedMerc = this.repository.getAll()[0];
+  }
+
+  selectMercById(id: number): void {
+    this.selectedMerc = this.repository.getAll().find((merc) => {
+      return merc.id === id;
+    });
   }
 }
