@@ -1,0 +1,9 @@
+<div class="merc-data-item">
+  <div class="merc-data-item-title-container px-2 py-1">
+    {{ name }}
+  </div>
+  <div class="merc-data-item-value-container">
+    <input type="text" class="merc-data-item-value px-2 py-1" [(ngModel)]="value" [disabled]="!isEditable"
+           [class.border-transparent]="!isEditable">
+  </div>
+</div>

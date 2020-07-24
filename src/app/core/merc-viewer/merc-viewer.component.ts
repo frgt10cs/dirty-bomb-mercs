@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, DoCheck, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Merc} from '../../shared/models/merc';
 
 @Component({
@@ -9,16 +9,16 @@ import {Merc} from '../../shared/models/merc';
 export class MercViewerComponent implements OnInit {
 
   @Input() selectedMerc: Merc;
-  editable: boolean;
+  isEditable: boolean;
 
   constructor() {
-    this.editable = false;
+    this.isEditable = false;
   }
 
   ngOnInit(): void {
   }
 
   saveMerc(): void {
-    this.editable = false;
+    this.isEditable = false;
   }
 }

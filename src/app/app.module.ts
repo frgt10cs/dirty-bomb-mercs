@@ -11,6 +11,7 @@ import { MercViewerComponent } from './core/merc-viewer/merc-viewer.component';
 import { MercDataGroupComponent } from './shared/components/merc-data-group/merc-data-group.component';
 import { MercInfoPartComponent } from './shared/components/merc-info-part/merc-info-part.component';
 import { MercInfoComponent } from './shared/components/merc-info/merc-info.component';
+import { MercDataItemComponent } from './shared/components/merc-data-item/merc-data-item.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MercInfoComponent } from './shared/components/merc-info/merc-info.compo
     MercViewerComponent,
     MercDataGroupComponent,
     MercInfoPartComponent,
-    MercInfoComponent
+    MercInfoComponent,
+    MercDataItemComponent
   ],
   imports: [
     BrowserModule,

@@ -11,19 +11,24 @@
     </div>
     <div class="merc-data-container">
       <div class="dark-text p-2 d-flex align-items-center justify-content-between">
-        <input type="text" class="dark-text merc-name" [value]="selectedMerc?.name" [disabled]="!editable"
-               [class.border-transparent]="!editable">
-        <button class="empty-btn dark-btn h6-small" (click)="this.editable = true" [disabled]="editable">Edit</button>
+        <input type="text" class="dark-text merc-name" [value]="selectedMerc?.name" [disabled]="!isEditable"
+               [class.border-transparent]="!isEditable">
+        <button class="empty-btn dark-btn h6-small" (click)="isEditable? saveMerc(): this.isEditable = true"> {{ isEditable?"Save":"Edit" }}</button>
       </div>
       <div class="merc-img-container">
         <img src="{{ selectedMerc?.imgUrl }}" alt="" class="merc-img">
       </div>
-      <app-merc-data-group *ngFor="let group of selectedMerc?.data" [dataGroup]="group" [editable]="editable">
-
+      <app-merc-data-group [name] = "'Profile'"></app-merc-data-group>
+      <app-merc-data-item [name] = "'Real Name'" [(value)]="selectedMerc.profile.realName" [isEditable]="isEditable">
+      </app-merc-data-item>
+      <app-merc-data-item [name] = "'Nationality'" [(value)]="selectedMerc.profile.nationality" [isEditable]="isEditable">
+      </app-merc-data-item>
+      <app-merc-data-group [name] = "'Attributes'">
       </app-merc-data-group>
-      <div *ngIf="editable">
-        <button (click)="saveMerc()">Save</button>
-      </div>
+      <app-merc-data-item [name] = "'Class'" [(value)]="selectedMerc.attributes.class" [isEditable]="isEditable">
+      </app-merc-data-item>
+      <app-merc-data-group [name] = "'Cost'">
+      </app-merc-data-group>
     </div>
   </div>
 </div>
