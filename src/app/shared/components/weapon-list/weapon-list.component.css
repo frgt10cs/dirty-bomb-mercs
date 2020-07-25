@@ -1,0 +1,26 @@
+.weapon{
+  color: #FDBC01;
+  cursor: pointer;
+}
+
+#weaponImg{
+  position: absolute;
+}
+
+li{
+  position: relative;
+}
+
+.weapon-img-cotainer{
+  left: 0;
+  top: -80px;
+  border: 1px solid grey;
+  background-color: white;
+  display: none;
+  padding: 1rem;
+}
+
+.weapon-img{
+  width: 175px;
+  height: 45px;
+}
