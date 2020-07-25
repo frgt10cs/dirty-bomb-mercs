@@ -1,8 +1,9 @@
 import {Component, Output} from '@angular/core';
 import {MercCard} from './shared/models/merc-card';
 import {RepositoryService} from './core/services/repository.service';
-import {Merc} from './shared/models/merc';
+import {Merc, Weapon} from './shared/models/merc';
 import {JsonRepositoryService} from './core/services/json-repository.service';
+import {WeaponService} from './core/services/weapon.service';
 
 @Component({
   selector: 'app-root',
@@ -11,18 +12,14 @@ import {JsonRepositoryService} from './core/services/json-repository.service';
   providers: [{provide: 'type', useValue: Merc}, {provide: RepositoryService, useClass: JsonRepositoryService}]
 })
 export class AppComponent {
-  public repository: RepositoryService<Merc>;
 
   selectedMerc: Merc;
 
-  constructor(private repos: RepositoryService<Merc>) {
-    this.repository = repos;
-    this.selectedMerc = this.repository.getAll()[0];
+  constructor(public mercRepository: RepositoryService<Merc>, public weaponService: WeaponService) {
+    this.selectedMerc = this.mercRepository.first();
   }
 
   selectMercById(id: number): void {
-    this.selectedMerc = this.repository.getAll().find((merc) => {
-      return merc.id === id;
-    });
+    this.selectedMerc = this.mercRepository.firstWhere(merc=>merc.id==id));
   }
 }

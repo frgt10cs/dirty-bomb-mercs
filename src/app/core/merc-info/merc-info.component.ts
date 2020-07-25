@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Info} from '../../models/merc';
+import {Ability, Info, Weapons} from '../../shared/models/merc';
 
 @Component({
   selector: 'app-merc-info',
@@ -9,6 +9,9 @@ import {Info} from '../../models/merc';
 export class MercInfoComponent implements OnInit {
 
   @Input() info: Info;
+  @Input() isEditable: boolean;
+  weapons: Weapons;
+  abilities: Ability;
 
   constructor() {
   }
