@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Merc} from '../../shared/models/merc';
 
+import {Json} from '../../shared/models/json';
+
 @Component({
   selector: 'app-merc-data',
   templateUrl: './merc-data.component.html',

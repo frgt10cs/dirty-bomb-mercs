@@ -1,6 +1,7 @@
 import {Repository} from './repository';
-import {Ability, Merc, Weapon} from '../../shared/models/merc';
+import {Ability, Merc} from '../../shared/models/merc';
 import {MercWeapon} from '../../shared/models/MercWeapon';
+import {Weapon} from '../../shared/models/weapon';
 
 export abstract class DbContext {
   mercs: Repository<Merc>;

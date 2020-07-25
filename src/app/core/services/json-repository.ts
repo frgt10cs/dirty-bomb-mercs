@@ -10,9 +10,9 @@ export class JsonRepository<T> extends Repository<T> {
 
   private data: T[];
 
-  constructor(type: new() => T, jsonData: any) {
+  constructor(type: new() => T, jsonModule: any) {
     super();
-    this.data = Json.read(jsonData, type);
+    this.data = Json.read(jsonModule.default, type);
   }
 
   all(): T[] {

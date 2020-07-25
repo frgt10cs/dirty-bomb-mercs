@@ -1,4 +1,4 @@
-import {Weapon} from '../../shared/models/merc';
+import {Weapon} from '../../shared/models/weapon';
 import {Injectable} from '@angular/core';
 import {DbContext} from './db-context';
 
@@ -12,7 +12,7 @@ export class WeaponService {
 
   getMercWeapons(mercId: number): Weapon[] {
     const ids = this.context.mercWeapons.where(rel =>
-      rel.userId === mercId).map(rel => rel.weaponId);
+      rel.mercId === mercId).map(rel => rel.weaponId);
     return this.context.weapons.where(weapon => ids.indexOf(weapon.id) !== -1);
   }
 }
