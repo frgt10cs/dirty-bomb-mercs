@@ -1,22 +1,18 @@
-import {Inject, Injectable} from '@angular/core';
-import {RepositoryService} from './repository.service';
-// @ts-ignore
-import jsonData from '../../../assets/appdata.json';
+import {Injectable} from '@angular/core';
+import {Repository} from './repository';
 
-/*import {Json} from '../../shared/models/json';*/
+import {Json} from '../../shared/models/json';
 
 @Injectable({
   providedIn: 'root'
 })
-export class JsonRepositoryService<T> extends RepositoryService<T> {
+export class JsonRepository<T> extends Repository<T> {
 
-  private type: new() => T;
   private data: T[];
 
-  constructor(@Inject('type') type: new () => T) {
+  constructor(type: new() => T, jsonData: any) {
     super();
-    this.type = type;
-    this.data = json.read(jsonData, type);
+    this.data = Json.read(jsonData, type);
   }
 
   all(): T[] {

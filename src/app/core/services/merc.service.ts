@@ -1,21 +1,21 @@
 import {Injectable} from '@angular/core';
-import {RepositoryService} from './repository.service';
 import {Merc} from '../../shared/models/merc';
 import {WeaponService} from './weapon.service';
+import {DbContext} from './db-context';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MercService {
 
-  constructor(private repository: RepositoryService<Merc>, private weaponService: WeaponService) {
+  constructor(private context: DbContext) {
   }
 
   getMercById(id: number): Merc {
-    return this.repository.firstWhere(merc => merc.id === id);
+    return this.context.mercs.firstWhere(merc => merc.id === id);
   }
 
-  all = () => this.repository.all();
+  all = () => this.context.mercs.all();
 
-  first = () => this.repository.first();
+  first = () => this.context.mercs.first();
 }

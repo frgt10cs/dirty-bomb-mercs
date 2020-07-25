@@ -3,7 +3,7 @@
     <input type="text" class="dark-text merc-name w-100" [value]="selectedMerc?.name" [disabled]="!isEditable"
            [class.dark-input-editable]="isEditable">
     <button class="empty-btn dark-btn h6-small"
-            (click)="isEditable? saveMerc(): this.isEditable = true"> {{ isEditable ? "Save" : "Edit" }}</button>
+            (click)="isEditable? this.isEditable=false: this.isEditable = true"> {{ isEditable ? "Save" : "Edit" }}</button>
   </div>
   <img src="{{ selectedMerc?.imgUrl }}" alt="" class="merc-img">
   <div *ngIf="isEditable">

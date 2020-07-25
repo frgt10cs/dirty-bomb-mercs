@@ -1,20 +1,18 @@
 import {Weapon} from '../../shared/models/merc';
-import {RepositoryService} from './repository.service';
-import {MercWeapon} from '../../shared/models/MercWeapon';
 import {Injectable} from '@angular/core';
+import {DbContext} from './db-context';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeaponService {
-  constructor(private weaponRepository: RepositoryService<Weapon>,
-              private relationsRepository: RepositoryService<MercWeapon>) {
+  constructor(private context: DbContext) {
 
   }
 
   getMercWeapons(mercId: number): Weapon[] {
-    const ids = this.relationsRepository.where(rel =>
+    const ids = this.context.mercWeapons.where(rel =>
       rel.userId === mercId).map(rel => rel.weaponId);
-    return this.weaponRepository.where(weapon => ids.indexOf(weapon.id) !== -1);
+    return this.context.weapons.where(weapon => ids.indexOf(weapon.id) !== -1);
   }
 }
