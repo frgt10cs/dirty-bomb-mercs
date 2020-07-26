@@ -10,7 +10,7 @@ import {Json} from '../../shared/models/json';
 })
 export class MercDataComponent implements OnInit {
 
-  @Input() selectedMerc: Merc;
+  @Input() merc: Merc;
   @Input() isEditable: boolean;
 
   constructor() {

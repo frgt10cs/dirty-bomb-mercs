@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {MercData} from '../../models/merc-data';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-merc-info-part',
@@ -8,6 +7,7 @@ import {MercData} from '../../models/merc-data';
 })
 export class MercInfoPartComponent implements OnInit {
 
+  @Input() isEditable: boolean;
   @Input() name: string;
   @Input() data: string;
 

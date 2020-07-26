@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Ability, Info} from '../../shared/models/merc';
+import {Ability, Info, Merc} from '../../shared/models/merc';
 import {Weapons} from '../../shared/models/weapon';
+import {AbilityService} from '../services/ability.service';
+import {WeaponService} from '../services/weapon.service';
 
 @Component({
   selector: 'app-merc-info',
@@ -9,15 +11,26 @@ import {Weapons} from '../../shared/models/weapon';
 })
 export class MercInfoComponent implements OnInit {
 
-  @Input() info: Info;
-  @Input() isEditable: boolean;
-  @Input() weapons: Weapons;
-  @Input() abilities: Ability[];
+  private _merc: Merc;
+  @Input()
+  set merc(value: Merc) {
+    this.weapons = this.weaponService.getMercWeapons(value.id);
+    this.abilities = this.abilityService.getMercAbilities(value.id);
+    this._merc = value;
+  }
 
-  constructor() {
+  get merc(): Merc {
+    return this._merc;
+  }
+
+  weapons: Weapons;
+  abilities: Ability[];
+  @Input() isEditable: boolean;
+
+  constructor(private weaponService: WeaponService, private abilityService: AbilityService) {
   }
 
   ngOnInit(): void {
-  }
 
+  }
 }

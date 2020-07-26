@@ -1,5 +1,5 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {Weapons} from '../../models/merc';
+import {Component, Input, OnInit} from '@angular/core';
+import {Weapons} from '../../models/weapon';
 
 @Component({
   selector: 'app-weapon-list',
@@ -18,7 +18,7 @@ export class WeaponListComponent implements OnInit {
 
   setElementDisplay(element: HTMLElement, value: string): void {
     if (element !== undefined) {
-      element.style.display = 'value';
+      element.style.display = value;
     }
   }
 }

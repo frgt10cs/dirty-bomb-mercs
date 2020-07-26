@@ -1,25 +1,43 @@
-import {Component, Output} from '@angular/core';
-import {MercCard} from './shared/models/merc-card';
-import {RepositoryService} from './core/services/repository.service';
-import {Merc, Weapon} from './shared/models/merc';
-import {JsonRepositoryService} from './core/services/json-repository.service';
+import {Component} from '@angular/core';
+import {Ability, Merc} from './shared/models/merc';
+import {MercService} from './core/services/merc.service';
+import {DbContext} from './core/services/db-context';
+import {JsonDbContext} from './core/services/json-db-context';
 import {WeaponService} from './core/services/weapon.service';
+import {Weapons} from './shared/models/weapon';
+import {AbilityService} from './core/services/ability.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [{provide: 'type', useValue: Merc}, {provide: RepositoryService, useClass: JsonRepositoryService}]
+  providers: [MercService, WeaponService, AbilityService, {provide: DbContext, useClass: JsonDbContext}]
 })
 export class AppComponent {
 
-  selectedMerc: Merc;
+  private _selectedMerc: Merc;
+  set selectedMerc(value: Merc) {
+    if (value === null) {
+      return;
+    }
+    const weapons = this.weaponService.getMercWeapons(value.id);
+    this.weapons = this.weaponService.getMercWeapons(value.id);
+    this._selectedMerc = value;
+  }
 
-  constructor(public mercRepository: RepositoryService<Merc>, public weaponService: WeaponService) {
-    this.selectedMerc = this.mercRepository.first();
+  get selectedMerc(): Merc {
+    return this._selectedMerc;
+  }
+
+  weapons: Weapons;
+  abilities: Ability[];
+  isEditable: boolean;
+
+  constructor(public mercService: MercService, private weaponService: WeaponService) {
+    this.selectedMerc = this.mercService.first();
   }
 
   selectMercById(id: number): void {
-    this.selectedMerc = this.mercRepository.firstWhere(merc=>merc.id==id));
+    this.selectedMerc = this.mercService.getMercById(id);
   }
 }

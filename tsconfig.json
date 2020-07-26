@@ -8,8 +8,10 @@
   "compilerOptions": {
     "module": "commonjs",
     "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "files": [],
   "references": [

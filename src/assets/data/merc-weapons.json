@@ -2,6 +2,19 @@
   {
     "id": 1,
     "mercId": 1,
-    "weaponId": 1
+    "weaponId": 1,
+    "type": 0
+  },
+  {
+    "id": 1,
+    "mercId": 1,
+    "weaponId": 2,
+    "type": 0
+  },
+  {
+    "id": 1,
+    "mercId": 1,
+    "weaponId": 3,
+    "type": 0
   }
 ]

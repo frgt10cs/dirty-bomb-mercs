@@ -1,7 +1,3 @@
-import {MercDataGroup} from './merc-data-group';
-import {MercData} from './merc-data';
-
-
 export enum Class {
   Engineer,
   Medic,
@@ -28,22 +24,16 @@ export class Cost {
   money: number;
 }
 
-export class Weapon {
-  imgUrl: string;
+export class Ability{
+  id: number;
   name: string;
-}
-
-export class Weapons {
-  primaries: Weapon[];
-  secondaries: Weapon[];
-  melee: Weapon[];
+  description: string;
 }
 
 export class Info {
   quote: string;
   overview: string;
-  abilities: string;
-  weapons: Weapons;
+  defaultLoadoutCard: string;
   videoUrl: string;
 }
 
@@ -56,39 +46,4 @@ export class Merc {
   attributes: Attributes;
   cost: Cost;
   information: Info;
-  /// Represents array of data group for demonstration
-  private _data: MercDataGroup[];
-
-  public get data(): MercDataGroup[] {
-    if (this._data == null) {
-      this._data = [
-        {
-          name: 'Profile',
-          data: [
-            new MercData('Real Name', this.profile.realName),
-            new MercData('Nationality', this.profile.nationality)
-          ]
-        },
-        {
-          name: 'Attributes',
-          data: [
-            new MercData('Class', this.attributes.class.toString()),
-            new MercData('Health', this.attributes.health.toString()),
-            new MercData('Sprint', this.attributes.sprint.toString()),
-            new MercData('Arm', this.attributes.arm.toString()),
-            new MercData('Defuse', this.attributes.defuse.toString())
-          ]
-        },
-        {
-          name: 'Cost',
-          data:
-            [
-              new MercData('Credits', this.cost.credits),
-              new MercData('Money', this.cost.money)
-            ]
-        }
-      ];
-    }
-    return this._data;
-  }
 }

@@ -1,6 +1,6 @@
 <h4>Primaries</h4>
 <ul>
-  <li *ngFor="let weapon of weapons.primaries">
+  <li *ngFor="let weapon of weapons?.primaries">
     <div #imgContainer class="weapon-img-cotainer position-absolute">
       <img src="{{ weapon.imgUrl }}" alt="" class="weapon-img">
     </div>
@@ -10,7 +10,7 @@
 </ul>
 <h4>Secondaries</h4>
 <ul>
-  <li *ngFor="let weapon of weapons.secondaries">
+  <li *ngFor="let weapon of weapons?.secondaries">
     <div #imgContainer class="weapon-img-cotainer position-absolute">
       <img src="{{ weapon.imgUrl }}" alt="" class="weapon-img">
     </div>
@@ -20,7 +20,7 @@
 </ul>
 <h4>Melee</h4>
 <ul>
-  <li *ngFor="let weapon of weapons.melee">
+  <li *ngFor="let weapon of weapons?.melee">
     <div #imgContainer class="weapon-img-cotainer position-absolute">
       <img src="{{ weapon.imgUrl }}" alt="" class="weapon-img">
     </div>

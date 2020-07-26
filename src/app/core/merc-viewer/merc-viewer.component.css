@@ -1,0 +1,13 @@
+.merc-viewer-container {
+  background-color: white;
+  border: 1px solid grey;
+}
+
+.merc-viewer-data{
+  display: flex;
+  flex-direction: row;
+}
+
+.merc-name{
+  font-size: 20px;
+}

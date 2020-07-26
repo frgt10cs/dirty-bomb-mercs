@@ -1,0 +1,16 @@
+<div class="merc-viewer-container p-2">
+  <div class="merc-name-container d-flex justify-content-between">
+    <h3 class="pt-2 pl-2">{{ merc?.name }}</h3>
+    <button class="empty-btn h6-small"
+            (click)="isEditable? this.isEditable=false: this.isEditable = true"> {{ isEditable ? "Save" : "Edit" }}</button>
+  </div>
+  <hr>
+  <div class="merc-viewer-data">
+    <app-merc-info [merc]="merc" [isEditable]="isEditable">
+
+    </app-merc-info>
+    <app-merc-data [merc]="merc" [isEditable]="isEditable">
+
+    </app-merc-data>
+  </div>
+</div>

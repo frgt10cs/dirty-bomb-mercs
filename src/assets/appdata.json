@@ -72,6 +72,7 @@
           }
         ]
       },
+      "defaultLoadoutCard": "Aimee's Default loadout card is the P81 Enhanced Sniper",
       "videoUrl": "https://www.youtube.com/embed/lqIPS9f7vGw"
     }
   },
@@ -153,6 +154,7 @@
           }
         ]
       },
+      "defaultLoadoutCard": "",
       "videoUrl": ""
     }
   }

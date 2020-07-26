@@ -1,7 +1,17 @@
 [
   {
     "id": 1,
-    "mercId": 1,
-    "weaponId": 1
+    "name": "PDP-70",
+    "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/e/e3/PDP-70.png/revision/latest/scale-to-width-down/350?cb=20151024154233"
+  },
+  {
+    "id": 2,
+    "name": "Fel-ix",
+    "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/5/55/Fel-ix.png/revision/latest/scale-to-width-down/349?cb=20151024154119"
+  },
+  {
+    "id": 3,
+    "name": "Grandeur SR",
+    "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/4/40/Grandeur_SR.png/revision/latest/scale-to-width-down/350?cb=20160210191505"
   }
 ]
