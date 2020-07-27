@@ -14,6 +14,7 @@ import { MercDataItemComponent } from './shared/components/merc-data-item/merc-d
 import { WeaponListComponent } from './shared/components/weapon-list/weapon-list.component';
 import { MercDataComponent } from './core/merc-data/merc-data.component';
 import { MercViewerComponent } from './core/merc-viewer/merc-viewer.component';
+import { AbilityListComponent } from './core/ability-list/ability-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MercViewerComponent } from './core/merc-viewer/merc-viewer.component';
     MercDataItemComponent,
     WeaponListComponent,
     MercDataComponent,
-    MercViewerComponent
+    MercViewerComponent,
+    AbilityListComponent
   ],
   imports: [
     BrowserModule,

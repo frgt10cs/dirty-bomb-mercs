@@ -20,8 +20,6 @@ export class AppComponent {
     if (value === null) {
       return;
     }
-    const weapons = this.weaponService.getMercWeapons(value.id);
-    this.weapons = this.weaponService.getMercWeapons(value.id);
     this._selectedMerc = value;
   }
 
@@ -29,11 +27,9 @@ export class AppComponent {
     return this._selectedMerc;
   }
 
-  weapons: Weapons;
-  abilities: Ability[];
   isEditable: boolean;
 
-  constructor(public mercService: MercService, private weaponService: WeaponService) {
+  constructor(public mercService: MercService) {
     this.selectedMerc = this.mercService.first();
   }
 

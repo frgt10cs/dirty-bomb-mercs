@@ -6,12 +6,12 @@
   },
   {
     "id": 2,
-    "name": "",
-    "description": ""
+    "name": "Artillery Strike",
+    "description": "By switching to his targeter and marking at a location, Arty calls down a quick salvo of high damage artillery rounds, which will fragmentate, and drop a rain of explosives over the selected area. It has a 20 second recharge, and he can hold 2 charges at a time."
   },
   {
     "id": 3,
-    "name": "",
-    "description": ""
+    "name": "Ammo Pack ",
+    "description": "These can be dropped on the floor or throw directly at teammates. Picking up an ammo pack instantly refills your reserve ammo to full. Throwing it directly at a teammate speeds up their ability's cooldown slightly."
   }
 ]

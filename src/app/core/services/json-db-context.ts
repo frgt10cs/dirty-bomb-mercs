@@ -12,11 +12,11 @@ import * as MercsJson from '../../../assets/data/mercs.json';
 // @ts-ignore
 import * as WeaponsJson from '../../../assets/data/weapons.json';
 // @ts-ignore
-import * as AbilitiesJson from '../../../assets/data/merc-abilities.json';
+import * as AbilitiesJson from '../../../assets/data/abilities.json';
 // @ts-ignore
 import * as MercWeapons from '../../../assets/data/merc-weapons.json';
 // @ts-ignore
-import * as MercAbilities from '../../../assets/data/merc-abilities.json';
+import * as MercAbilitiesJson from '../../../assets/data/merc-abilities.json';
 
 
 @Injectable({
@@ -30,6 +30,6 @@ export class JsonDbContext extends DbContext {
     this.weapons = new JsonRepository<Weapon>(Weapon, WeaponsJson);
     this.abilities = new JsonRepository<Ability>(Ability, AbilitiesJson);
     this.mercWeapons = new JsonRepository<MercWeapon>(MercWeapon, MercWeapons);
-    this.mercAbilities = new JsonRepository<MercAbility>(MercAbility, MercAbilities);
+    this.mercAbilities = new JsonRepository<MercAbility>(MercAbility, MercAbilitiesJson);
   }
 }

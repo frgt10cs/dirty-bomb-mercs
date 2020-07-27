@@ -1,7 +1,7 @@
 <div *ngIf="merc" class="merc-info-container p-3">
   <div class="merc-qoute-container p-4">
     <div class="merc-qoute">
-      <i>{{ merc.information.quote }}</i>
+      <i><span [attr.contenteditable]="isEditable">{{ merc.information.quote }}</span></i>
     </div>
     <div class="merc-quote-author text-right">
       - Dirty Bomb Profile
@@ -10,10 +10,13 @@
   <app-merc-info-part [name]="'Overview'" [data]="merc.information.overview" [isEditable]="isEditable">
 
   </app-merc-info-part>
-  <app-merc-info-part [name]="'Abilities'" [data]="abilities" [isEditable]="isEditable">
+  <app-merc-info-part [name]="'Abilities'">
 
   </app-merc-info-part>
-  <app-merc-info-part [name]="'Weapons'" [data]="merc.information.defaultLoadoutCard">
+  <app-ability-list *ngFor="let ability of abilities" [ability]="ability">
+
+  </app-ability-list>
+  <app-merc-info-part [name]="'Weapons'" [data]="merc.information.defaultLoadoutCard" [isEditable]="isEditable">
 
   </app-merc-info-part>
   <app-weapon-list [weapons]="weapons">
