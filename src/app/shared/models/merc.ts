@@ -35,6 +35,7 @@ export class Info {
   overview: string;
   defaultLoadoutCard: string;
   videoUrl: string;
+  profile: string;
 }
 
 export class Merc {

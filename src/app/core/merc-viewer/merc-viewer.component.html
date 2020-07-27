@@ -2,7 +2,7 @@
   <div class="merc-name-container d-flex justify-content-between">
     <h3 class="pt-2 pl-2">{{ merc?.name }}</h3>
     <button class="empty-btn h6-small"
-            (click)="isEditable? this.isEditable=false: this.isEditable = true"> {{ isEditable ? "Save" : "Edit" }}</button>
+            (click)="isEditable? saveMerc(): this.isEditable = true"> {{ isEditable ? "Save" : "Edit" }}</button>
   </div>
   <hr>
   <div class="merc-viewer-data">

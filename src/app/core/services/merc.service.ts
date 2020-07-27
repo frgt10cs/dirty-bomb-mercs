@@ -15,6 +15,10 @@ export class MercService {
     return this.context.mercs.firstWhere(merc => merc.id === id);
   }
 
+  saveChanges(): void{
+    this.context.mercs.saveChanges();
+  }
+
   all = () => this.context.mercs.all();
 
   first = () => this.context.mercs.first();

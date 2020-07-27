@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Merc} from '../../shared/models/merc';
+import {MercService} from '../services/merc.service';
 
 @Component({
   selector: 'app-merc-viewer',
@@ -11,10 +12,14 @@ export class MercViewerComponent implements OnInit {
   @Input() merc: Merc;
   isEditable: boolean;
 
-  constructor() {
+  constructor(private mercService: MercService) {
   }
 
   ngOnInit(): void {
   }
 
+  saveMerc(): void {
+    this.isEditable = false;
+    this.mercService.saveChanges();
+  }
 }

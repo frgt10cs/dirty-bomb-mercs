@@ -11,7 +11,7 @@ import { MercDataGroupComponent } from './shared/components/merc-data-group/merc
 import { MercInfoPartComponent } from './shared/components/merc-info-part/merc-info-part.component';
 import { MercInfoComponent } from './core/merc-info/merc-info.component';
 import { MercDataItemComponent } from './shared/components/merc-data-item/merc-data-item.component';
-import { WeaponListComponent } from './shared/components/weapon-list/weapon-list.component';
+import { WeaponListComponent } from './core/weapon-list/weapon-list.component';
 import { MercDataComponent } from './core/merc-data/merc-data.component';
 import { MercViewerComponent } from './core/merc-viewer/merc-viewer.component';
 import { AbilityListComponent } from './core/ability-list/ability-list.component';

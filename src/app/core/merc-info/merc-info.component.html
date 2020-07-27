@@ -10,15 +10,12 @@
   <app-merc-info-part [name]="'Overview'" [data]="merc.information.overview" [isEditable]="isEditable">
 
   </app-merc-info-part>
-  <app-merc-info-part [name]="'Abilities'">
+  <app-merc-info-part [name]="'Profile'" [data]="merc.information.profile" [isEditable]="isEditable">
 
   </app-merc-info-part>
   <app-ability-list *ngFor="let ability of abilities" [ability]="ability">
 
   </app-ability-list>
-  <app-merc-info-part [name]="'Weapons'" [data]="merc.information.defaultLoadoutCard" [isEditable]="isEditable">
-
-  </app-merc-info-part>
   <app-weapon-list [weapons]="weapons">
 
   </app-weapon-list>

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Weapons} from '../../models/weapon';
+import {Weapons} from '../../shared/models/weapon';
 
 @Component({
   selector: 'app-weapon-list',
