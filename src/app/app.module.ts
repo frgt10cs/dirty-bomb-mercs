@@ -15,6 +15,9 @@ import { WeaponListComponent } from './core/weapon-list/weapon-list.component';
 import { MercDataComponent } from './core/merc-data/merc-data.component';
 import { MercViewerComponent } from './core/merc-viewer/merc-viewer.component';
 import { AbilityListComponent } from './core/ability-list/ability-list.component';
+import { WeaponsComponent } from './core/weapons/weapons.component';
+import { MercsComponent } from './core/mercs/mercs.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,9 +32,12 @@ import { AbilityListComponent } from './core/ability-list/ability-list.component
     WeaponListComponent,
     MercDataComponent,
     MercViewerComponent,
-    AbilityListComponent
+    AbilityListComponent,
+    WeaponsComponent,
+    MercsComponent,
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     SafePipeModule

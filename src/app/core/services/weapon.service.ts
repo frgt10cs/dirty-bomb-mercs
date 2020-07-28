@@ -11,7 +11,7 @@ export class WeaponService {
 
   }
 
-  getMercWeapons(mercId: number): Weapons{
+  getMercWeapons(mercId: number): Weapons {
     const weapons: Weapons = new Weapons();
     weapons.primaries = this.getMercWeaponsByType(mercId, WeaponType.primary);
     weapons.secondaries = this.getMercWeaponsByType(mercId, WeaponType.secondary);
@@ -25,4 +25,6 @@ export class WeaponService {
       .map((mw) => mw.weaponId);
     return this.context.weapons.where(w => weaponIds.includes(w.id));
   }
+
+  getAll = () => this.context.weapons.all();
 }

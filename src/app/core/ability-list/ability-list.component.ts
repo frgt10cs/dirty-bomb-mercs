@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ability} from '../../shared/models/merc';
+import {AbilityService} from '../services/ability.service';
 
 @Component({
   selector: 'app-ability-list',
@@ -8,12 +9,14 @@ import {Ability} from '../../shared/models/merc';
 })
 export class AbilityListComponent implements OnInit {
 
-  @Input() ability: Ability;
+  abilities: Ability[];
+  @Input() mercId: number;
 
-  constructor() {
+  constructor(private abilityService: AbilityService) {
   }
 
   ngOnInit(): void {
+    this.abilities = this.abilityService.getMercAbilities(this.mercId);
   }
 
 }

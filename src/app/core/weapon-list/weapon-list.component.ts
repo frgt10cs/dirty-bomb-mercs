@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Weapons} from '../../shared/models/weapon';
+import {WeaponService} from '../services/weapon.service';
 
 @Component({
   selector: 'app-weapon-list',
@@ -8,12 +9,14 @@ import {Weapons} from '../../shared/models/weapon';
 })
 export class WeaponListComponent implements OnInit {
 
-  @Input() weapons: Weapons;
+  weapons: Weapons;
+  @Input() mercId: number;
 
-  constructor() {
+  constructor(private weaponService: WeaponService) {
   }
 
   ngOnInit(): void {
+    this.weapons = this.weaponService.getMercWeapons(this.mercId);
   }
 
   setElementDisplay(element: HTMLElement, value: string): void {

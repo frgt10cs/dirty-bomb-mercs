@@ -1,9 +1,9 @@
 <div class="d-flex justify-content-between">
   <h4>Abilities</h4>
-  <button class="empty-btn">Edit</button>
+  <a routerLink="/abilities/{{ mercId }}" class="empty-btn">Edit</a>
 </div>
 <hr>
-<div>
+<div *ngFor="let ability of abilities">
   <h6><u>{{ ability.name }}</u></h6>
   <p>{{ ability.description }}</p>
 </div>

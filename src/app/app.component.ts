@@ -15,25 +15,4 @@ import {AbilityService} from './core/services/ability.service';
 })
 export class AppComponent {
 
-  private _selectedMerc: Merc;
-  set selectedMerc(value: Merc) {
-    if (value === null) {
-      return;
-    }
-    this._selectedMerc = value;
-  }
-
-  get selectedMerc(): Merc {
-    return this._selectedMerc;
-  }
-
-  isEditable: boolean;
-
-  constructor(public mercService: MercService) {
-    this.selectedMerc = this.mercService.first();
-  }
-
-  selectMercById(id: number): void {
-    this.selectedMerc = this.mercService.getMercById(id);
-  }
 }
