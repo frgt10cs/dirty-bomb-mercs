@@ -1,0 +1,11 @@
+<div class="weapon-container d-flex my-3 shadow">
+  <div>
+    <img src="{{ weapon.imgUrl }}" alt="">
+    <p class="weapon-title"><span class="weapon-id">{{ weapon.id }}</span> {{ weapon.name }}</p>
+  </div>
+  <div class="ml-3 d-flex flex-column justify-content-around">
+    <button class="weapon-button">Add as primary</button>
+    <button class="weapon-button">Add as secondary</button>
+    <button class="weapon-button">Add as melee</button>
+  </div>
+</div>

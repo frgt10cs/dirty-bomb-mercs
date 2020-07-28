@@ -1,7 +1,26 @@
-<div>
-  <img src="{{ merc.imgPreviewUrl }}" alt="">
-  <span>{{ merc.name }}</span>
+<app-page-title [title]="'Weapons'"
+                description="Dirty Bomb contains a lot of weapons that are based on real-life guns from Heckler & Koch (MP5, USP, HK21, etc)"></app-page-title>
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class="col-auto bg-light px-4 py-3">
+      <app-weapon *ngFor="let weapon of weapons" [weapon]="weapon"></app-weapon>
+    </div>
+    <div class="col-auto bg-light ml-3 px-4 py-3">
+      <img src="{{ merc.imgPreviewUrl }}" alt="" class="d-block my-0 mx-auto">
+      <h4>{{ merc.name }}'s weapons</h4>
+      <h5>Primary</h5>
+      <ul>
+        <li *ngFor="let weapon of mercWeapons.primaries">{{ weapon.name }}</li>
+      </ul>
+      <h5>Secondary</h5>
+      <div>
+        <li *ngFor="let weapon of mercWeapons.secondaries">{{ weapon.name }}</li>
+      </div>
+      <h5>Melee</h5>
+      <div>
+        <li *ngFor="let weapon of mercWeapons.melee">{{ weapon.name }}</li>
+      </div>
+    </div>
+  </div>
 </div>
-<div>
-  <div *ngFor="let weapon of weapons"></div>
-</div>
+

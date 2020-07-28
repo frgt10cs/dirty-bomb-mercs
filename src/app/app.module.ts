@@ -18,6 +18,8 @@ import { AbilityListComponent } from './core/ability-list/ability-list.component
 import { WeaponsComponent } from './core/weapons/weapons.component';
 import { MercsComponent } from './core/mercs/mercs.component';
 import {AppRoutingModule} from './app-routing.module';
+import { WeaponComponent } from './shared/components/weapon/weapon.component';
+import { PageTitleComponent } from './shared/components/page-title/page-title.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import {AppRoutingModule} from './app-routing.module';
     AbilityListComponent,
     WeaponsComponent,
     MercsComponent,
+    WeaponComponent,
+    PageTitleComponent,
   ],
   imports: [
     AppRoutingModule,
