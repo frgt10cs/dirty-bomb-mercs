@@ -20,6 +20,7 @@ import { MercsComponent } from './core/mercs/mercs.component';
 import {AppRoutingModule} from './app-routing.module';
 import { WeaponComponent } from './shared/components/weapon/weapon.component';
 import { PageTitleComponent } from './shared/components/page-title/page-title.component';
+import { MercWeaponListComponent } from './shared/components/merc-weapon-list/merc-weapon-list.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PageTitleComponent } from './shared/components/page-title/page-title.co
     MercsComponent,
     WeaponComponent,
     PageTitleComponent,
+    MercWeaponListComponent,
   ],
   imports: [
     AppRoutingModule,

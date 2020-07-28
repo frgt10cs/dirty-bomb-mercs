@@ -1,0 +1,8 @@
+<h5>{{ title }}</h5>
+<div>
+  <span *ngIf="weapons.length == 0" class="empty-filler">empty</span>
+  <li *ngFor="let weapon of weapons">
+    {{ weapon.name }}
+    <button (click)="removeWeapon(weapon)" class="remove-weapon-btn">×</button>
+  </li>
+</div>

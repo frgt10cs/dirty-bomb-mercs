@@ -28,16 +28,44 @@ export class WeaponsComponent implements OnInit {
     this.mercWeapons = this.weaponService.getMercWeapons(this.mercId);
   }
 
-  addPrimaryWeapon(weaponId: number) {
-    alert(123);
-    this.mercWeapons.primaries.push(this.weapons.find(w => w.id === weaponId));
+  addPrimaryWeapon(weaponId: number): void {
+    if (this.mercWeapons.primaries.find(w => w.id === weaponId) == null) {
+      this.mercWeapons.primaries.push(this.weapons.find(w => w.id === weaponId));
+    }
+  }
+
+  removePrimaryWeapon(weapon: Weapon): void {
+    const index = this.mercWeapons.primaries.indexOf(weapon);
+    if (index !== -1) {
+      this.mercWeapons.primaries.splice(index, 1);
+    }
   }
 
   addSecondaryWeapon(weaponId: number) {
-
+    if (this.mercWeapons.secondaries.find(w => w.id === weaponId) == null) {
+      this.mercWeapons.secondaries.push(this.weapons.find(w => w.id === weaponId));
+    }
   }
+
+  removeSecondaryWeapon(weapon: Weapon): void {
+    const index = this.mercWeapons.secondaries.indexOf(weapon);
+    if (index !== -1) {
+      this.mercWeapons.secondaries.splice(index, 1);
+    }
+  }
+
 
   addMeleeWeapon(weaponId: number) {
-
+    if (this.mercWeapons.melee.find(w => w.id === weaponId) == null) {
+      this.mercWeapons.melee.push(this.weapons.find(w => w.id === weaponId));
+    }
   }
+
+  removeMeleeWeapon(weapon: Weapon): void {
+    const index = this.mercWeapons.melee.indexOf(weapon);
+    if (index !== -1) {
+      this.mercWeapons.melee.splice(index, 1);
+    }
+  }
+
 }

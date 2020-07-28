@@ -1,0 +1,20 @@
+.empty-filler{
+  color: lightgray;
+  font-family: Consolas;
+}
+
+.remove-weapon-btn{
+  color: red;
+  border: none;
+  background: none;
+  margin-left: auto;
+}
+
+.remove-weapon-btn:hover{
+  font-weight: 900;
+}
+
+.empty-filler{
+  color: gray;
+  padding-left: 1rem;
+}
