@@ -1,12 +1,17 @@
 import {Injectable} from '@angular/core';
-import {Repository} from './repository';
+import {DataProvider} from './data-provider';
 
 import {Json} from '../../shared/models/json';
+
+/*
+* Works with data in array that uploaded from JSON
+* Doesn't save changes, because it doesn't change JSON file, only array
+* */
 
 @Injectable({
   providedIn: 'root'
 })
-export class JsonRepository<T> extends Repository<T> {
+export class JsonDataProvider<T> extends DataProvider<T> {
 
   private data: T[];
 

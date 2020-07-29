@@ -32,10 +32,10 @@
       </app-merc-weapon-list>
       <div class="row mt-2">
         <div class="col">
-          <button class="light-btn w-100">Return</button>
+          <button class="light-btn w-100" (click)="goBack()">Return</button>
         </div>
         <div class="col">
-          <button id="save-btn" class="w-100 merc-weapon-btn">Save</button>
+          <button id="save-btn" class="w-100 merc-weapon-btn" (click)="saveMercWeapons()">Save</button>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
-import {JsonRepository} from './json-repository';
+import {JsonDataProvider} from './json-data-provider';
 import {Ability, Merc} from '../../shared/models/merc';
-import {Repository} from './repository';
+import {DataProvider} from './data-provider';
 import {DbContext} from './db-context';
 import {MercWeapon} from '../../shared/models/merc-weapon';
 import {Injectable} from '@angular/core';
@@ -26,10 +26,10 @@ export class JsonDbContext extends DbContext {
 
   constructor() {
     super();
-    this.mercs = new JsonRepository<Merc>(Merc, MercsJson);
-    this.weapons = new JsonRepository<Weapon>(Weapon, WeaponsJson);
-    this.abilities = new JsonRepository<Ability>(Ability, AbilitiesJson);
-    this.mercWeapons = new JsonRepository<MercWeapon>(MercWeapon, MercWeapons);
-    this.mercAbilities = new JsonRepository<MercAbility>(MercAbility, MercAbilitiesJson);
+    this.mercs = new JsonDataProvider<Merc>(Merc, MercsJson);
+    this.weapons = new JsonDataProvider<Weapon>(Weapon, WeaponsJson);
+    this.abilities = new JsonDataProvider<Ability>(Ability, AbilitiesJson);
+    this.mercWeapons = new JsonDataProvider<MercWeapon>(MercWeapon, MercWeapons);
+    this.mercAbilities = new JsonDataProvider<MercAbility>(MercAbility, MercAbilitiesJson);
   }
 }

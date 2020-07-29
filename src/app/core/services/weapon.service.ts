@@ -1,7 +1,7 @@
 import {Weapon, Weapons} from '../../shared/models/weapon';
 import {Injectable} from '@angular/core';
 import {DbContext} from './db-context';
-import {WeaponType} from '../../shared/models/merc-weapon';
+import {MercWeapon, WeaponType} from '../../shared/models/merc-weapon';
 
 @Injectable({
   providedIn: 'root'
@@ -27,4 +27,16 @@ export class WeaponService {
   }
 
   getAll = () => this.context.weapons.all();
+
+  addMercWeapon(mercId: number, weaponId: number, type: WeaponType): void {
+    this.context.mercWeapons.add({mercId, weaponId, type});
+  }
+
+  removeMercWeapon(mercId: number, weapon: Weapon): void {
+    const mercWeapon = this.context.mercWeapons
+      .firstWhere(mw => mw.mercId === mercId && mw.weaponId === weapon.id);
+    if (mercWeapon !== null) {
+      this.context.mercWeapons.remove(mercWeapon);
+    }
+  }
 }

@@ -21,6 +21,5 @@ li{
 }
 
 .weapon-img{
-  width: 175px;
-  height: 45px;
+  max-height: 45px;
 }

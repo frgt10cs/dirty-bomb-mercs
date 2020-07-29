@@ -5,7 +5,7 @@ export enum WeaponType{
 }
 
 export class MercWeapon {
-  id: number;
+  id?: number;
   mercId: number;
   weaponId: number;
   type: WeaponType;

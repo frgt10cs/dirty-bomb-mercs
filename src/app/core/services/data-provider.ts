@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export abstract class Repository<T> {
+export abstract class DataProvider<T> {
 
   abstract first(): T;
 
