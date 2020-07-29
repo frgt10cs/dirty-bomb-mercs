@@ -6,15 +6,51 @@
     "type": 0
   },
   {
-    "id": 1,
+    "id": 2,
     "mercId": 1,
     "weaponId": 2,
     "type": 0
   },
   {
-    "id": 1,
+    "id": 3,
     "mercId": 1,
     "weaponId": 3,
     "type": 0
+  },
+  {
+    "id": 4,
+    "mercId": 1,
+    "weaponId": 4,
+    "type": 1
+  },
+  {
+    "id": 5,
+    "mercId": 1,
+    "weaponId": 5,
+    "type": 1
+  },
+  {
+    "id": 6,
+    "mercId": 1,
+    "weaponId": 6,
+    "type": 1
+  },
+  {
+    "id": 7,
+    "mercId": 1,
+    "weaponId": 7,
+    "type": 2
+  },
+  {
+    "id": 8,
+    "mercId": 1,
+    "weaponId": 8,
+    "type": 2
+  },
+  {
+    "id": 9,
+    "mercId": 1,
+    "weaponId": 9,
+    "type": 2
   }
 ]

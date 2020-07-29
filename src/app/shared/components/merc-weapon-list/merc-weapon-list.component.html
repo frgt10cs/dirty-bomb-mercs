@@ -1,8 +1,14 @@
-<h5>{{ title }}</h5>
-<div>
-  <span *ngIf="weapons.length == 0" class="empty-filler">empty</span>
-  <li *ngFor="let weapon of weapons">
-    {{ weapon.name }}
-    <button (click)="removeWeapon(weapon)" class="remove-weapon-btn">×</button>
-  </li>
+<div class="mt-2">
+  <h5 class="weapon-list-title">{{ title }}</h5>
+  <div>
+    <span *ngIf="weapons.length == 0; else weaponList" class="empty-filler">empty</span>
+    <ng-template #weaponList>
+      <ul>
+        <li *ngFor="let weapon of weapons">
+          {{ weapon.name }}
+          <button (click)="removeWeapon(weapon)" class="remove-weapon-btn">×</button>
+        </li>
+      </ul>
+    </ng-template>
+  </div>
 </div>

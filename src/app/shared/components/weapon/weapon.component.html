@@ -1,11 +1,11 @@
 <div class="weapon-container d-flex my-3 shadow">
-  <div>
-    <img src="{{ weapon.imgUrl }}" alt="">
+  <div class="mr-3 flex-grow-1">
+    <img src="{{ weapon.imgUrl }}" alt="" class="d-block mx-auto">
     <p class="weapon-title"><span class="weapon-id">{{ weapon.id }}</span> {{ weapon.name }}</p>
   </div>
-  <div class="ml-3 d-flex flex-column justify-content-around">
-    <button class="weapon-button" (click)="addAsPrimaryWeapon()">Add as primary</button>
-    <button class="weapon-button" (click)="addAsSecondaryWeapon()">Add as secondary</button>
-    <button class="weapon-button" (click)="addAsMeleeWeapon()">Add as melee</button>
+  <div class="ml-auto d-flex flex-column justify-content-around">
+    <button class="light-btn" (click)="addAsPrimaryWeapon()">Add as primary</button>
+    <button class="light-btn" (click)="addAsSecondaryWeapon()">Add as secondary</button>
+    <button class="light-btn" (click)="addAsMeleeWeapon()">Add as melee</button>
   </div>
 </div>
