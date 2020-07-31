@@ -1,0 +1,5 @@
+.merc-cards-container{
+  position: sticky;
+  place-self: flex-start;
+  top: 20px;
+}

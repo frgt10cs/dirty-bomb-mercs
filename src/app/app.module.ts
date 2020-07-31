@@ -21,6 +21,10 @@ import {AppRoutingModule} from './app-routing.module';
 import { WeaponComponent } from './shared/components/weapon/weapon.component';
 import { PageTitleComponent } from './shared/components/page-title/page-title.component';
 import { MercWeaponListComponent } from './shared/components/merc-weapon-list/merc-weapon-list.component';
+import { AbilitiesComponent } from './core/abilities/abilities.component';
+import { AbilityComponent } from './shared/components/ability/ability.component';
+import { MercListEditorComponent } from './shared/components/merc-list-editor/merc-list-editor.component';
+import { MercListEditorListComponent } from './shared/components/merc-list-editor-list/merc-list-editor-list.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,10 @@ import { MercWeaponListComponent } from './shared/components/merc-weapon-list/me
     WeaponComponent,
     PageTitleComponent,
     MercWeaponListComponent,
+    AbilitiesComponent,
+    AbilityComponent,
+    MercListEditorComponent,
+    MercListEditorListComponent,
   ],
   imports: [
     AppRoutingModule,

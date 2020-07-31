@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {DbContext} from './db-context';
-import {Ability} from '../../shared/models/merc';
+import {Ability} from '../../shared/models/ability';
 
 @Injectable({
   providedIn: 'root'

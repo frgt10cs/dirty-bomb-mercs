@@ -1,11 +1,11 @@
 import {JsonDataProvider} from './json-data-provider';
-import {Ability, Merc} from '../../shared/models/merc';
-import {DataProvider} from './data-provider';
+import {Merc} from '../../shared/models/merc';
 import {DbContext} from './db-context';
 import {MercWeapon} from '../../shared/models/merc-weapon';
 import {Injectable} from '@angular/core';
 import {Weapon} from '../../shared/models/weapon';
 import {MercAbility} from '../../shared/models/merc-ability';
+import {Ability} from '../../shared/models/ability';
 
 // @ts-ignore
 import * as MercsJson from '../../../assets/data/mercs.json';

@@ -3,13 +3,6 @@
   font-family: Consolas;
 }
 
-.remove-weapon-btn{
-  color: red;
-  border: none;
-  background: none;
-  margin-left: auto;
-}
-
 .remove-weapon-btn:hover{
   font-weight: 900;
 }

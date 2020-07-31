@@ -32,6 +32,7 @@ input {
 .empty-btn {
   border: 0 !important;
   background: none;
+  padding: 0;
 }
 
 .dark-btn {
@@ -72,4 +73,11 @@ input {
 .light-btn:hover {
   background-color: black;
   color: white;
+}
+
+.x-mark{
+  color: red;
+  border: none;
+  background: none;
+  margin-left: auto;
 }

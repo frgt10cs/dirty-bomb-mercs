@@ -1,0 +1,14 @@
+<div class="mt-2">
+  <h5 *ngIf="title" class="list-title">{{ title }}</h5>
+  <div>
+    <span *ngIf="list.length == 0; else ul" class="empty-filler">empty</span>
+    <ng-template #ul>
+      <ul>
+        <li *ngFor="let li of list">
+          {{ li.value }}
+          <button (click)="removeItem(li.id)" class="x-mark">×</button>
+        </li>
+      </ul>
+    </ng-template>
+  </div>
+</div>

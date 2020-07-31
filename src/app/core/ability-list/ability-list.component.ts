@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Ability} from '../../shared/models/merc';
+import {Ability} from '../../shared/models/ability';
 import {AbilityService} from '../services/ability.service';
 
 @Component({

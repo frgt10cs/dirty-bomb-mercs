@@ -2,16 +2,19 @@
   {
     "id": 1,
     "name": "SNITCH Device",
-    "description": "The Scanning Node (and) Invasive Tactical Covert Hypodynamic Device or SNITCH Device for short is a throw-able camera that sticks to the first wall or surfaces it comes into contact with. The device automatically spots enemy players in-front of it and if in range can zap them with a neural disruptor which debilitates players. If players are marked they take 25% more bullet damage for 7 seconds. The neural disruptor halts any health regeneration, however, medics can remove the debuff by giving players health. If not destroyed, the SNITCH last 25 seconds and has a 25 second cooldown.\n\nThe SNITCH deals 1 damage upon debilitating a player, and it is possible to get a kill with this damage."
+    "description": "The Scanning Node (and) Invasive Tactical Covert Hypodynamic Device or SNITCH Device for short is a throw-able camera that sticks to the first wall or surfaces it comes into contact with. The device automatically spots enemy players in-front of it and if in range can zap them with a neural disruptor which debilitates players. If players are marked they take 25% more bullet damage for 7 seconds. The neural disruptor halts any health regeneration, however, medics can remove the debuff by giving players health. If not destroyed, the SNITCH last 25 seconds and has a 25 second cooldown.\n\nThe SNITCH deals 1 damage upon debilitating a player, and it is possible to get a kill with this damage.",
+    "imgUrl": ""
   },
   {
     "id": 2,
     "name": "Artillery Strike",
-    "description": "By switching to his targeter and marking at a location, Arty calls down a quick salvo of high damage artillery rounds, which will fragmentate, and drop a rain of explosives over the selected area. It has a 20 second recharge, and he can hold 2 charges at a time."
+    "description": "By switching to his targeter and marking at a location, Arty calls down a quick salvo of high damage artillery rounds, which will fragmentate, and drop a rain of explosives over the selected area. It has a 20 second recharge, and he can hold 2 charges at a time.",
+    "imgUrl": "https://gamepedia.cursecdn.com/dirtybomb_gamepedia/1/15/Ability_Artillery_Spotter.png?version=b3b892eddb15f2575be766b8d59d3024"
   },
   {
     "id": 3,
     "name": "Ammo Pack ",
-    "description": "These can be dropped on the floor or throw directly at teammates. Picking up an ammo pack instantly refills your reserve ammo to full. Throwing it directly at a teammate speeds up their ability's cooldown slightly."
+    "description": "These can be dropped on the floor or throw directly at teammates. Picking up an ammo pack instantly refills your reserve ammo to full. Throwing it directly at a teammate speeds up their ability's cooldown slightly.",
+    "imgUrl": "https://gamepedia.cursecdn.com/dirtybomb_gamepedia/7/70/Ability_Ammo_Pack.png?version=71e1951da27dfdcd2ba44407ae1e9fb5"
   }
 ]

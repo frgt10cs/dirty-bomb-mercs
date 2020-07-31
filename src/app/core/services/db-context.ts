@@ -1,8 +1,9 @@
 import {DataProvider} from './data-provider';
-import {Ability, Merc} from '../../shared/models/merc';
+import  {Merc} from '../../shared/models/merc';
 import {MercWeapon} from '../../shared/models/merc-weapon';
 import {Weapon} from '../../shared/models/weapon';
 import {MercAbility} from '../../shared/models/merc-ability';
+import {Ability} from '../../shared/models/ability';
 
 export abstract class DbContext {
   mercs: DataProvider<Merc>;

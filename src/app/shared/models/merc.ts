@@ -24,12 +24,6 @@ export class Cost {
   money: number;
 }
 
-export class Ability{
-  id: number;
-  name: string;
-  description: string;
-}
-
 export class Info {
   quote: string;
   overview: string;

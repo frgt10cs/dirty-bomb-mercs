@@ -1,0 +1,16 @@
+<app-page-title
+  title="Abilities"
+  description="">
+</app-page-title>
+<div class="container">
+  <div class="row">
+    <div class="col-4 bg-light">
+      <app-ability *ngFor="let ability of abilities" [ability]="ability"></app-ability>
+    </div>
+    <app-merc-list-editor
+      [list]="getAbilityList()"
+      title="Abilities"
+      [merc] = "merc">
+    </app-merc-list-editor>
+  </div>
+</div>

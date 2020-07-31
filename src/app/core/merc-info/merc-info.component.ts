@@ -1,8 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Ability, Info, Merc} from '../../shared/models/merc';
+import {Merc} from '../../shared/models/merc';
 import {Weapons} from '../../shared/models/weapon';
 import {AbilityService} from '../services/ability.service';
 import {WeaponService} from '../services/weapon.service';
+import {Ability} from '../../shared/models/ability';
 
 @Component({
   selector: 'app-merc-info',

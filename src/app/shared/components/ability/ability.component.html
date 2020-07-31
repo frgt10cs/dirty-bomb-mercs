@@ -1,0 +1,20 @@
+<div class="d-flex align-items-center p-1">
+  <img src="{{ ability.imgUrl }}" alt="">
+  <div class="d-flex justify-content-center align-items-start flex-column ml-2">
+    <span>{{ ability.name }}</span>
+    <button
+      class="empty-btn"
+      (click)="showAbilityDescription = !showAbilityDescription">
+      {{ showAbilityDescription ? 'Hide' : 'More' }}
+    </button>
+  </div>
+  <div class="ml-auto">
+    <button class="empty-btn">Add</button>
+  </div>
+</div>
+
+<div *ngIf="showAbilityDescription">
+  <p class="pl-1">
+    {{ ability.description }}
+  </p>
+</div>
