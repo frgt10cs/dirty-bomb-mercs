@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ListItem} from '../../models/list-item';
+import {IListItem} from '../../models/ilist-item';
+import {List} from '../../models/list';
 
 @Component({
   selector: 'app-merc-list-editor-list',
@@ -8,16 +9,15 @@ import {ListItem} from '../../models/list-item';
 })
 export class MercListEditorListComponent implements OnInit {
 
-  @Input() list: ListItem[];
-  @Input() title: string;
-  @Output() remove: EventEmitter<number> = new EventEmitter<number>();
+  @Input() list: List;
+  @Output() remove: EventEmitter<IListItem> = new EventEmitter<IListItem>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  removeItem(id: number): void{
-    this.remove.emit(id);
+  removeItem(item: IListItem): void{
+    this.remove.emit(item);
   }
 }

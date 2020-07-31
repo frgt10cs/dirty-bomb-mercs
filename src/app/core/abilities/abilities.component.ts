@@ -5,7 +5,6 @@ import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {MercService} from '../services/merc.service';
 import {Merc} from '../../shared/models/merc';
-import {ListItem} from '../../shared/models/list-item';
 
 @Component({
   selector: 'app-abilities',
@@ -26,17 +25,5 @@ export class AbilitiesComponent implements OnInit {
     this.mercId = +this.route.snapshot.paramMap.get('mercId');
     this.merc = this.mercService.getMercById(this.mercId);
     this.abilities = this.abilityService.getMercAbilities(this.mercId);
-  }
-
-  getAbilityList(): ListItem[] {
-    return this.abilities.map(a => ({id: a.id, value: a.name}));
-  }
-
-  goBack(): void {
-    this.location.back();
-  }
-
-  saveMercAbilities(): void {
-
   }
 }

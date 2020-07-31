@@ -1,7 +1,13 @@
-export class Weapon {
+import {IListItem} from './ilist-item';
+
+export class Weapon implements IListItem{
   id: number;
   imgUrl: string;
   name: string;
+
+  getValue(): number | string {
+    return this.name;
+  }
 }
 
 export class Weapons {

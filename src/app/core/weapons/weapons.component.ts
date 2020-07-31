@@ -4,7 +4,6 @@ import {Merc} from '../../shared/models/merc';
 import {MercService} from '../services/merc.service';
 import {WeaponService} from '../services/weapon.service';
 import {Weapon, Weapons} from '../../shared/models/weapon';
-import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-weapons',
@@ -19,7 +18,7 @@ export class WeaponsComponent implements OnInit {
   mercWeapons: Weapons;
 
   constructor(private route: ActivatedRoute, private mercService: MercService,
-              private weaponService: WeaponService, private location: Location) {
+              private weaponService: WeaponService) {
   }
 
   ngOnInit(): void {
@@ -29,10 +28,6 @@ export class WeaponsComponent implements OnInit {
     this.mercWeapons = this.weaponService.getMercWeapons(this.mercId);
   }
 
-  goBack(): void{
-    this.location.back();
-  }
-
   addPrimaryWeapon(weaponId: number): void {
     if (this.mercWeapons.primaries.find(w => w.id === weaponId) == null) {
       this.mercWeapons.primaries.push(this.weapons.find(w => w.id === weaponId));
@@ -40,11 +35,11 @@ export class WeaponsComponent implements OnInit {
     }
   }
 
-  removePrimaryWeapon(weapon: Weapon): void {
-    const index = this.mercWeapons.primaries.indexOf(weapon);
+  removePrimaryWeapon(weaponId: number): void {
+    this.weaponService.removeMercWeapon(this.mercId, weaponId);
+    const index = this.mercWeapons.primaries.findIndex(w => w.id === weaponId);
     if (index !== -1) {
       this.mercWeapons.primaries.splice(index, 1);
-      this.weaponService.removeMercWeapon(this.mercId, weapon);
     }
   }
 
@@ -55,11 +50,11 @@ export class WeaponsComponent implements OnInit {
     }
   }
 
-  removeSecondaryWeapon(weapon: Weapon): void {
-    const index = this.mercWeapons.secondaries.indexOf(weapon);
+  removeSecondaryWeapon(weaponId: number): void {
+    this.weaponService.removeMercWeapon(this.mercId, weaponId);
+    const index = this.mercWeapons.secondaries.findIndex(w => w.id === weaponId);
     if (index !== -1) {
       this.mercWeapons.secondaries.splice(index, 1);
-      this.weaponService.removeMercWeapon(this.mercId, weapon);
     }
   }
 
@@ -70,11 +65,11 @@ export class WeaponsComponent implements OnInit {
     }
   }
 
-  removeMeleeWeapon(weapon: Weapon): void {
-    const index = this.mercWeapons.melee.indexOf(weapon);
+  removeMeleeWeapon(weaponId: number): void {
+    this.weaponService.removeMercWeapon(this.mercId, weaponId);
+    const index = this.mercWeapons.melee.findIndex(w => w.id === weaponId);
     if (index !== -1) {
       this.mercWeapons.melee.splice(index, 1);
-      this.weaponService.removeMercWeapon(this.mercId, weapon);
     }
   }
 

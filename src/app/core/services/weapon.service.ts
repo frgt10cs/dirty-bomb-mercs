@@ -32,9 +32,9 @@ export class WeaponService {
     this.context.mercWeapons.add({mercId, weaponId, type});
   }
 
-  removeMercWeapon(mercId: number, weapon: Weapon): void {
+  removeMercWeapon(mercId: number, weaponId: number): void{
     const mercWeapon = this.context.mercWeapons
-      .firstWhere(mw => mw.mercId === mercId && mw.weaponId === weapon.id);
+      .firstWhere(mw => mw.mercId === mercId && mw.weaponId === weaponId);
     if (mercWeapon !== null) {
       this.context.mercWeapons.remove(mercWeapon);
     }
