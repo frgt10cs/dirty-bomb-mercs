@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Merc} from '../../shared/models/merc';
 import {Weapons} from '../../shared/models/weapon';
-import {AbilityService} from '../services/ability.service';
-import {WeaponService} from '../services/weapon.service';
+import {AbilityJsonService} from '../services/json-implementations/ability-json.service';
+import {WeaponJsonService} from '../services/json-implementations/weapon-json.service';
 import {Ability} from '../../shared/models/ability';
 
 @Component({
@@ -28,7 +28,7 @@ export class MercInfoComponent implements OnInit {
   abilities: Ability[];
   @Input() isEditable: boolean;
 
-  constructor(private weaponService: WeaponService, private abilityService: AbilityService) {
+  constructor(private weaponService: WeaponJsonService, private abilityService: AbilityJsonService) {
   }
 
   ngOnInit(): void {

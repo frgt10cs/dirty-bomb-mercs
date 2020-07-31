@@ -1,9 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ability} from '../../shared/models/ability';
-import {AbilityService} from '../services/ability.service';
+import {AbilityJsonService} from '../services/json-implementations/ability-json.service';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
-import {MercService} from '../services/merc.service';
+import {MercService} from '../services/interfaces/merc.service';
 import {Merc} from '../../shared/models/merc';
 
 @Component({
@@ -17,7 +17,7 @@ export class AbilitiesComponent implements OnInit {
   merc: Merc;
   abilities: Ability[];
 
-  constructor(private route: ActivatedRoute, private abilityService: AbilityService,
+  constructor(private route: ActivatedRoute, private abilityService: AbilityJsonService,
               private location: Location, private mercService: MercService) {
   }
 

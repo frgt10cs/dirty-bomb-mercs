@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Merc} from '../../shared/models/merc';
-import {MercService} from '../services/merc.service';
-import {WeaponService} from '../services/weapon.service';
+import {MercService} from '../services/interfaces/merc.service';
+import {WeaponJsonService} from '../services/json-implementations/weapon-json.service';
 import {Weapon, Weapons} from '../../shared/models/weapon';
 
 @Component({
@@ -18,7 +18,7 @@ export class WeaponsComponent implements OnInit {
   mercWeapons: Weapons;
 
   constructor(private route: ActivatedRoute, private mercService: MercService,
-              private weaponService: WeaponService) {
+              private weaponService: WeaponJsonService) {
   }
 
   ngOnInit(): void {

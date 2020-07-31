@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChange, SimpleChanges} from '@angular/core';
 import {Weapons} from '../../shared/models/weapon';
-import {WeaponService} from '../services/weapon.service';
+import {WeaponJsonService} from '../services/json-implementations/weapon-json.service';
 
 @Component({
   selector: 'app-weapon-list',
@@ -12,7 +12,7 @@ export class WeaponListComponent implements OnInit, OnChanges {
   weapons: Weapons;
   @Input() mercId: number;
 
-  constructor(private weaponService: WeaponService) {
+  constructor(private weaponService: WeaponJsonService) {
   }
 
   ngOnInit(): void {

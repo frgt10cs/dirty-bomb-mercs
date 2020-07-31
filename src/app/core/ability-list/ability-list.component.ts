@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ability} from '../../shared/models/ability';
-import {AbilityService} from '../services/ability.service';
+import {AbilityJsonService} from '../services/json-implementations/ability-json.service';
 
 @Component({
   selector: 'app-ability-list',
@@ -12,7 +12,7 @@ export class AbilityListComponent implements OnInit {
   abilities: Ability[];
   @Input() mercId: number;
 
-  constructor(private abilityService: AbilityService) {
+  constructor(private abilityService: AbilityJsonService) {
   }
 
   ngOnInit(): void {

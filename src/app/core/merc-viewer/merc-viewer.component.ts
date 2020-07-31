@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Merc} from '../../shared/models/merc';
-import {MercService} from '../services/merc.service';
+import {MercService} from '../services/interfaces/merc.service';
 
 @Component({
   selector: 'app-merc-viewer',
