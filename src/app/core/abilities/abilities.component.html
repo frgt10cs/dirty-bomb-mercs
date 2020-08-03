@@ -5,10 +5,10 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-4 bg-light p-2">
-      <app-ability *ngFor="let ability of abilities" [ability]="ability"></app-ability>
+      <app-ability *ngFor="let ability of abilities" [ability]="ability" (addAbility)="abilityList.add($event)"></app-ability>
     </div>
     <app-merc-list-editor
-      [lists]="[({title: 'Abilities', items: abilities})]"
+      [lists]="[abilityList]"
       [merc] = "merc">
     </app-merc-list-editor>
   </div>

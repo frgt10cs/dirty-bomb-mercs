@@ -1,12 +1,16 @@
 import {IListItem} from './ilist-item';
 
-export class Weapon implements IListItem{
+export class Weapon implements IListItem {
   id: number;
   imgUrl: string;
   name: string;
 
   getValue(): number | string {
     return this.name;
+  }
+
+  getId(): number {
+    return this.id;
   }
 }
 

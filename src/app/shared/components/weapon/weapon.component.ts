@@ -9,12 +9,9 @@ import {Weapon} from '../../models/weapon';
 export class WeaponComponent implements OnInit {
 
   @Input() weapon: Weapon;
-  @Output() addAsPrimary: EventEmitter<number> = new EventEmitter<number>();
-  @Output() removeFromPrimary: EventEmitter<number> = new EventEmitter<number>();
-  @Output() addAsSecondary: EventEmitter<number> = new EventEmitter<number>();
-  @Output() removeFromSecondary: EventEmitter<number> = new EventEmitter<number>();
-  @Output() addAsMelee: EventEmitter<number> = new EventEmitter<number>();
-  @Output() removeFromMelee: EventEmitter<number> = new EventEmitter<number>();
+  @Output() addAsPrimary: EventEmitter<Weapon> = new EventEmitter<Weapon>();
+  @Output() addAsSecondary: EventEmitter<Weapon> = new EventEmitter<Weapon>();
+  @Output() addAsMelee: EventEmitter<Weapon> = new EventEmitter<Weapon>();
 
   constructor() {
   }
@@ -23,14 +20,14 @@ export class WeaponComponent implements OnInit {
   }
 
   addAsPrimaryWeapon(): void {
-    this.addAsPrimary.emit(this.weapon.id);
+    this.addAsPrimary.emit(this.weapon);
   }
 
   addAsSecondaryWeapon(): void {
-    this.addAsSecondary.emit(this.weapon.id);
+    this.addAsSecondary.emit(this.weapon);
   }
 
   addAsMeleeWeapon(): void {
-    this.addAsMelee.emit(this.weapon.id);
+    this.addAsMelee.emit(this.weapon);
   }
 }

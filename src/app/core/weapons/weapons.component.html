@@ -7,16 +7,14 @@
     <div class="col-auto bg-light px-4 py-3">
       <app-weapon
         *ngFor="let weapon of weapons" [weapon]="weapon"
-        (addAsPrimary)="addPrimaryWeapon($event)"
-        (addAsSecondary)="addSecondaryWeapon($event)"
-        (addAsMelee)="addMeleeWeapon($event)">
+        (addAsPrimary)="primaryList.add($event)"
+        (addAsSecondary)="secondaryList.add($event)"
+        (addAsMelee)="meleeList.add($event)">
       </app-weapon>
     </div>
     <app-merc-list-editor
-      [lists]="[({title:'Primary', items:mercWeapons.primaries}),
-      ({title:'Secondary', items:mercWeapons.secondaries}),
-      ({title:'Melee', items:mercWeapons.melee})]"
-      [merc]="merc">
+      [merc]="merc"
+      [lists]="[primaryList, secondaryList, meleeList]">
     </app-merc-list-editor>
   </div>
 </div>

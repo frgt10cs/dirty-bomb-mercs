@@ -3,7 +3,8 @@ import {ActivatedRoute} from '@angular/router';
 import {Merc} from '../../shared/models/merc';
 import {MercService} from '../services/interfaces/merc.service';
 import {WeaponJsonService} from '../services/json-implementations/weapon-json.service';
-import {Weapon, Weapons} from '../../shared/models/weapon';
+import {Weapon} from '../../shared/models/weapon';
+import {List} from '../../shared/models/list';
 
 @Component({
   selector: 'app-weapons',
@@ -15,65 +16,52 @@ export class WeaponsComponent implements OnInit {
   mercId: number;
   merc: Merc;
   weapons: Weapon[];
-  mercWeapons: Weapons;
+  primaryList: List;
+  secondaryList: List;
+  meleeList: List;
 
   constructor(private route: ActivatedRoute, private mercService: MercService,
               private weaponService: WeaponJsonService) {
+
   }
 
   ngOnInit(): void {
     this.mercId = +this.route.snapshot.paramMap.get('mercId');
     this.merc = this.mercService.getMercById(this.mercId);
     this.weapons = this.weaponService.getAll();
-    this.mercWeapons = this.weaponService.getMercWeapons(this.mercId);
-  }
+    const mercWeapons = this.weaponService.getMercWeapons(this.mercId);
 
-  addPrimaryWeapon(weaponId: number): void {
-    if (this.mercWeapons.primaries.find(w => w.id === weaponId) == null) {
-      this.mercWeapons.primaries.push(this.weapons.find(w => w.id === weaponId));
-      this.weaponService.addMercWeapon(this.mercId, weaponId, 0);
-    }
-  }
+    this.primaryList = new List('Primary', mercWeapons.primaries, (name, item) => {
+      switch (name) {
+        case 'remove':
+          this.weaponService.removeMercWeapon(this.mercId, item.getId());
+          break;
+        case 'add':
+          this.weaponService.addMercWeapon(this.mercId, item.getId(), 0);
+          break;
+      }
+    });
 
-  removePrimaryWeapon(weaponId: number): void {
-    this.weaponService.removeMercWeapon(this.mercId, weaponId);
-    const index = this.mercWeapons.primaries.findIndex(w => w.id === weaponId);
-    if (index !== -1) {
-      this.mercWeapons.primaries.splice(index, 1);
-    }
-  }
+    this.secondaryList = new List('Secondary', mercWeapons.secondaries, (name, item) => {
+      switch (name) {
+        case 'remove':
+          this.weaponService.removeMercWeapon(this.mercId, item.getId());
+          break;
+        case 'add':
+          this.weaponService.addMercWeapon(this.mercId, item.getId(), 1);
+          break;
+      }
+    });
 
-  addSecondaryWeapon(weaponId: number): void {
-    if (this.mercWeapons.secondaries.find(w => w.id === weaponId) == null) {
-      this.mercWeapons.secondaries.push(this.weapons.find(w => w.id === weaponId));
-      this.weaponService.addMercWeapon(this.mercId, weaponId, 1);
-    }
-  }
-
-  removeSecondaryWeapon(weaponId: number): void {
-    this.weaponService.removeMercWeapon(this.mercId, weaponId);
-    const index = this.mercWeapons.secondaries.findIndex(w => w.id === weaponId);
-    if (index !== -1) {
-      this.mercWeapons.secondaries.splice(index, 1);
-    }
-  }
-
-  addMeleeWeapon(weaponId: number): void {
-    if (this.mercWeapons.melee.find(w => w.id === weaponId) == null) {
-      this.mercWeapons.melee.push(this.weapons.find(w => w.id === weaponId));
-      this.weaponService.addMercWeapon(this.mercId, weaponId, 2);
-    }
-  }
-
-  removeMeleeWeapon(weaponId: number): void {
-    this.weaponService.removeMercWeapon(this.mercId, weaponId);
-    const index = this.mercWeapons.melee.findIndex(w => w.id === weaponId);
-    if (index !== -1) {
-      this.mercWeapons.melee.splice(index, 1);
-    }
-  }
-
-  saveMercWeapons(): void {
-
+    this.meleeList = new List('Secondary', mercWeapons.melee, (name, item) => {
+      switch (name) {
+        case 'remove':
+          this.weaponService.removeMercWeapon(this.mercId, item.getId());
+          break;
+        case 'add':
+          this.weaponService.addMercWeapon(this.mercId, item.getId(), 2);
+          break;
+      }
+    });
   }
 }

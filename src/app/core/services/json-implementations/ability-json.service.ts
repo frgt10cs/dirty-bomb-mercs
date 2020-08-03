@@ -22,10 +22,27 @@ export class AbilityJsonService implements AbilityService {
     this.mercAbilities = Json.read(MercAbilitiesJson.default, MercAbility);
   }
 
+  all = () => this.abilities;
+
+  addMercAbility(mercId: number, abilityId: number): void {
+    const mercAbility = new MercAbility();
+    mercAbility.mercId = mercId;
+    mercAbility.abilityId = abilityId;
+    this.mercAbilities.push(mercAbility);
+  }
+
   getMercAbilities(mercId: number): Ability[] {
     const abilitiesIds = this.mercAbilities
       .filter(ma => ma.mercId === mercId)
       .map(a => a.id);
     return this.abilities.filter(a => abilitiesIds.includes(a.id));
+  }
+
+  removeMercAbility(mercId: number, abilityId: number): void {
+    const index = this.mercAbilities
+      .findIndex(ma => ma.abilityId === abilityId && ma.mercId === mercId);
+    if (index !== -1) {
+      this.mercAbilities.splice(index, 1);
+    }
   }
 }

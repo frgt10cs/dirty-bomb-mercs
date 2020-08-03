@@ -1,11 +1,10 @@
 <div class="col-auto bg-light ml-3 px-4 py-3">
   <img src="{{ merc.imgPreviewUrl }}" alt="" class="d-block my-0 mx-auto">
   <h4 class="mt-3 mb-4 text-center">{{ merc.name }}'s {{ title }}</h4>
-  <app-merc-list-editor-list
+  <app-merc-list
     *ngFor="let list of lists"
-    [list]="list"
-    (remove)="removeItem()">
-  </app-merc-list-editor-list>
+    [list]="list">
+  </app-merc-list>
   <div class="row mt-2">
     <div class="col">
       <button class="light-btn w-100" (click)="goBack()">Return</button>

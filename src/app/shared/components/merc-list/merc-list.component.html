@@ -4,9 +4,9 @@
     <span *ngIf="list == null || list.items == null || list.items.length == 0; else ul" class="empty-filler">empty</span>
     <ng-template #ul>
       <ul>
-        <li *ngFor="let li of list.items">
-          {{ li.getValue() }}
-          <button (click)="removeItem(li)" class="x-mark">×</button>
+        <li *ngFor="let item of list.items">
+          {{ item.getValue() }}
+          <button (click)="list.remove(item)" class="x-mark">×</button>
         </li>
       </ul>
     </ng-template>

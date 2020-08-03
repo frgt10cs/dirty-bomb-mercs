@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Ability} from '../../models/ability';
 
 @Component({
@@ -9,6 +9,7 @@ import {Ability} from '../../models/ability';
 export class AbilityComponent implements OnInit {
 
   @Input() ability: Ability;
+  @Output() addAbility: EventEmitter<Ability> = new EventEmitter<Ability>();
   showAbilityDescription: boolean;
 
   constructor() {
@@ -18,4 +19,7 @@ export class AbilityComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addMercAbility(): void{
+    this.addAbility.emit(this.ability);
+  }
 }

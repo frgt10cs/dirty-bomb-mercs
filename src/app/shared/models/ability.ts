@@ -9,4 +9,8 @@ export class Ability implements IListItem{
   getValue(): number | string {
     return this.name;
   }
+
+  getId(): number {
+    return this.id;
+  }
 }

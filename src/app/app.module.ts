@@ -24,7 +24,7 @@ import {MercWeaponListComponent} from './shared/components/merc-weapon-list/merc
 import {AbilitiesComponent} from './core/abilities/abilities.component';
 import {AbilityComponent} from './shared/components/ability/ability.component';
 import {MercListEditorComponent} from './shared/components/merc-list-editor/merc-list-editor.component';
-import {MercListEditorListComponent} from './shared/components/merc-list-editor-list/merc-list-editor-list.component';
+import {MercListComponent} from './shared/components/merc-list/merc-list.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import {MercListEditorListComponent} from './shared/components/merc-list-editor-
     AbilitiesComponent,
     AbilityComponent,
     MercListEditorComponent,
-    MercListEditorListComponent,
+    MercListComponent,
   ],
   imports: [
     AppRoutingModule,
