@@ -3,11 +3,11 @@ import {Ability} from '../../shared/models/ability';
 import {AbilityJsonService} from '../services/json-implementations/ability-json.service';
 
 @Component({
-  selector: 'app-ability-list',
-  templateUrl: './ability-list.component.html',
-  styleUrls: ['./ability-list.component.css']
+  selector: 'app-merc-info-ability-list',
+  templateUrl: './merc-info-ability-list.component.html',
+  styleUrls: ['./merc-info-ability-list.component.css']
 })
-export class AbilityListComponent implements OnInit {
+export class MercInfoAbilityListComponent implements OnInit {
 
   abilities: Ability[];
   @Input() mercId: number;

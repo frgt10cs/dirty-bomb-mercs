@@ -7,6 +7,8 @@ import {WeaponService} from '../interfaces/weapon.service';
 import * as WeaponsJson from '../../../../assets/data/weapons.json';
 // @ts-ignore
 import * as MercWeaponsJson from '../../../../assets/data/merc-weapons.json';
+import {Json} from '../../../shared/models/json';
+import {Merc} from '../../../shared/models/merc';
 
 
 @Injectable({
@@ -17,8 +19,8 @@ export class WeaponJsonService implements WeaponService{
   mercWeapons: MercWeapon[];
 
   constructor() {
-    this.weapons = WeaponsJson.default;
-    this.mercWeapons = MercWeaponsJson.default;
+    this.weapons = Json.read(WeaponsJson.default, Weapon);
+    this.mercWeapons = Json.read(MercWeaponsJson.default, MercWeapon);
   }
 
   getMercWeapons(mercId: number): Weapons {

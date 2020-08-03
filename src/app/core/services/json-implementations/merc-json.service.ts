@@ -2,12 +2,13 @@ import {Merc} from '../../../shared/models/merc';
 // @ts-ignore
 import * as MercsJson from '../../../../assets/data/mercs.json';
 import {MercService} from '../interfaces/merc.service';
+import {Json} from '../../../shared/models/json';
 
 export class MercJsonService implements MercService{
   mercs: Merc[];
 
   constructor() {
-    this.mercs = MercsJson.default;
+    this.mercs = Json.read(MercsJson.default, Merc);
   }
 
   getMercById(id: number): Merc {

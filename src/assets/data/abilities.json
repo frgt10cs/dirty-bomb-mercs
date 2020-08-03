@@ -3,7 +3,7 @@
     "id": 1,
     "name": "SNITCH Device",
     "description": "The Scanning Node (and) Invasive Tactical Covert Hypodynamic Device or SNITCH Device for short is a throw-able camera that sticks to the first wall or surfaces it comes into contact with. The device automatically spots enemy players in-front of it and if in range can zap them with a neural disruptor which debilitates players. If players are marked they take 25% more bullet damage for 7 seconds. The neural disruptor halts any health regeneration, however, medics can remove the debuff by giving players health. If not destroyed, the SNITCH last 25 seconds and has a 25 second cooldown.\n\nThe SNITCH deals 1 damage upon debilitating a player, and it is possible to get a kill with this damage.",
-    "imgUrl": ""
+    "imgUrl": "https://gamepedia.cursecdn.com/dirtybomb_gamepedia/f/fb/Ability_Heartbeat_Sensor.png?version=e83ed140b021ad2a7962205cdc7a281e"
   },
   {
     "id": 2,

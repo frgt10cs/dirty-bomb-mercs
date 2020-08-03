@@ -3,8 +3,8 @@
   description="">
 </app-page-title>
 <div class="container">
-  <div class="row">
-    <div class="col-4 bg-light">
+  <div class="row justify-content-center">
+    <div class="col-4 bg-light p-2">
       <app-ability *ngFor="let ability of abilities" [ability]="ability"></app-ability>
     </div>
     <app-merc-list-editor

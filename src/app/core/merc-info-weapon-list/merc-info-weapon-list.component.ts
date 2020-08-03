@@ -3,11 +3,11 @@ import {Weapons} from '../../shared/models/weapon';
 import {WeaponJsonService} from '../services/json-implementations/weapon-json.service';
 
 @Component({
-  selector: 'app-weapon-list',
-  templateUrl: './weapon-list.component.html',
-  styleUrls: ['./weapon-list.component.css']
+  selector: 'app-merc-info-weapon-list',
+  templateUrl: './merc-info-weapon-list.component.html',
+  styleUrls: ['./merc-info-weapon-list.component.css']
 })
-export class WeaponListComponent implements OnInit, OnChanges {
+export class MercInfoWeaponListComponent implements OnInit, OnChanges {
 
   weapons: Weapons;
   @Input() mercId: number;

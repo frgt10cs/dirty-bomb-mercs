@@ -8,6 +8,7 @@ import * as MercAbilitiesJson from '../../../../assets/data/merc-abilities.json'
 
 // @ts-ignore
 import * as AbilitiesJson from '../../../../assets/data/abilities.json';
+import {Json} from '../../../shared/models/json';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class AbilityJsonService implements AbilityService {
   mercAbilities: MercAbility[];
 
   constructor() {
-    this.abilities = AbilitiesJson.default;
-    this.mercAbilities = MercAbilitiesJson.default;
+    this.abilities = Json.read(AbilitiesJson.default, Ability);
+    this.mercAbilities = Json.read(MercAbilitiesJson.default, MercAbility);
   }
 
   getMercAbilities(mercId: number): Ability[] {
