@@ -1,6 +1,6 @@
 @font-face {
   font-family: DirtyBomb;
-  src: url("/assets/fonts/DirtyBomb_DD-Black-Cyr.otf") format("opentype");
+  src: url("assets/fonts/DirtyBomb_DD-Black-Cyr.otf") format("opentype");
 }
 
 * {
