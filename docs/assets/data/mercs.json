@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "name": "Aimee",
+    "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/b/b6/Aimee_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025944",
+    "imgPreviewUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/3/32/Aimee_Portrait.png/revision/latest/scale-to-width-down/80?cb=20151111055734",
+    "profile": {
+      "realName": "N/A",
+      "nationality": "French"
+    },
+    "attributes": {
+      "class": "Recon",
+      "health": 90,
+      "sprint": 440,
+      "arm": 5,
+      "defuse": 8
+    },
+    "cost": {
+      "credits": 40000,
+      "money": 7.99
+    },
+    "information": {
+      "quote": "Strictly speaking I'm the Aimer, not the Aimee",
+      "overview": "A lightning quick Sniper savant with a taste for chic and a chip on her shoulder, Aimee delivers disruption en route for her team. Her Snitch device contains a neural disruptor that softens up Mercs as well as spotting them, bidding her opponents adieu.",
+      "defaultLoadoutCard": "Aimee's Default loadout card is the P81 Enhanced Sniper",
+      "videoUrl": "https://www.youtube.com/embed/lqIPS9f7vGw",
+      "profile": "Would you die for fashion? Aimee almost did, acting as a bodyguard to designer powerhouse Max Bashki when his skull was punctured by a high powered rifle in his Paris apartment. Although the blame was hardly hers, her only witness was destined for a morgue more than a court. Now she's in London, ready to track down the Merc that left her an outcast from the high fashion security sector.\n\nA quick and potent sniper, able to close down open areas and assassinate her victims from afar. Her Snitch Device excels at picking out enemy activity and softening up her victims."
+    }
+  },
+  {
+    "id": 2,
+    "name": "Arty",
+    "imgUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/4/4b/Arty_Character_Card.png/revision/latest/scale-to-width-down/315?cb=20151012025945",
+    "imgPreviewUrl": "https://vignette.wikia.nocookie.net/dirtybomb/images/8/84/Arty_Portrait.png/revision/latest/scale-to-width-down/80?cb=20151111055735",
+    "videoUrl": "",
+    "profile": {
+      "realName": "CJ Wond",
+      "nationality": "Chinese"
+    },
+    "attributes": {
+      "class": "Fire support",
+      "health": 120,
+      "sprint": 400,
+      "arm": 5,
+      "defuse": 8
+    },
+    "cost": {
+      "credits": 35000,
+      "money": 6.99
+    },
+    "information": {
+      "quote": "Call me Arty. And stay out of my way, okay? Dangerous for you",
+      "overview": "His artillery designator lets him mark out targets for devastating artillery salvos while staying at a distance from the front line. He also can throw ammo packs to keep his teammates' weapons loaded.",
+      "defaultLoadoutCard": "",
+      "videoUrl": "",
+      "profile": "Have you ever loved someone you shouldn't have? Have you ever said something you shouldn't have? Are you sharing a secret you're just dying to reveal? Arty couldn’t give a shit. He has bills to pay - Hire him and he'll kill your enemies. Come on, time is money. Nobody knows who or what he spends his earnings on, or where he goes on his downtime. There are rumors he’s a loving family man. He must be saving up the human affection for someone, right?\n\nArty's laser designator lets him mark out targets for devastating artillery salvos while staying a safe distance from the front-line. He's highly effective at the fire support/area denial role vital for securing outdoor objectives, and can keep his teammates resupplied with ammo to gain the edge in firefights."
+    }
+  }
+]
