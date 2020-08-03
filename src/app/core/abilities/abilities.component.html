@@ -8,6 +8,7 @@
       <app-ability *ngFor="let ability of abilities" [ability]="ability" (addAbility)="abilityList.add($event)"></app-ability>
     </div>
     <app-merc-list-editor
+      title="abilities"
       [lists]="[abilityList]"
       [merc] = "merc">
     </app-merc-list-editor>
