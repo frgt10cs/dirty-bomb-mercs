@@ -7,16 +7,12 @@ import {WeaponJsonService} from '../services/json-implementations/weapon-json.se
   templateUrl: './merc-info-weapon-list.component.html',
   styleUrls: ['./merc-info-weapon-list.component.css']
 })
-export class MercInfoWeaponListComponent implements OnInit, OnChanges {
+export class MercInfoWeaponListComponent implements OnChanges {
 
   weapons: Weapons;
   @Input() mercId: number;
 
   constructor(private weaponService: WeaponJsonService) {
-  }
-
-  ngOnInit(): void {
-
   }
 
   setElementDisplay(element: HTMLElement, value: string): void {
